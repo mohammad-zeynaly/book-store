@@ -124,6 +124,12 @@ table {
   border-spacing: 0;
 }
 
+/* ======================== Declare variabels css  ========================*/
+:root {
+  --primary-color: #758bfd;
+  --white-color: #ffffff;
+}
+
 /* ======================== Css Fonts Add  ========================*/
 
 @font-face {
@@ -161,9 +167,17 @@ ul {
 a {
   text-decoration: none;
 }
+button {
+  background: transparent;
+  border: none;
+  font-family: iran-sans-medium;
+  cursor: pointer;
+}
 body {
   font-size: 1.6rem;
   font-family: iran-sans-regular, Arial, Helvetica, sans-serif;
+  background-color: #f8f8fa;
+  direction: rtl;
 }
 .container {
   width: 100%;
@@ -174,3 +188,89 @@ body {
 }
 
 /* ======================== Css Component Style  ========================*/
+.sm-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+/* ======================== Start Main  Style  ========================*/
+
+/* 
+  ===================
+    style header  
+  ===================
+*/
+
+.header {
+}
+.nav {
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper-right {
+  background-color: var(--white-color);
+  box-shadow: 0px 13px 26px 0px rgba(12, 12, 12, 0.06);
+  flex-basis: 70%;
+  padding: 2rem 0;
+  border-bottom-left-radius: 4rem;
+}
+.nav__wrapper-right {
+  display: flex;
+  align-items: center;
+}
+.nav-brand {
+}
+.nav-brand__img {
+  width: 15rem;
+}
+.nav-menu {
+  display: flex;
+  margin-right: 5rem;
+}
+.nav-menu__item {
+  margin-left: 3.2rem;
+}
+.nav-menu__link {
+  color: #636363;
+  font-family: iran-sans-bold;
+  transition: all 150ms ease-in;
+}
+.nav-menu__link--active {
+  color: var(--primary-color);
+}
+.nav-menu__link:hover {
+  color: var(--primary-color);
+}
+.nav-wrapper-left {
+  flex-basis: 30%;
+}
+.nav__wrapper-left {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-wrapper-left__basket-btn {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #0000001a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-wrapper-left__login-btn {
+  background-color: var(--primary-color);
+  padding: 1.2rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--white-color);
+  font-family: iran-sans-bold;
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.nav-wrapper-left__login-btn span {
+  display: block;
+  margin-right: 0.7rem;
+}

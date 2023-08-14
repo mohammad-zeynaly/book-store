@@ -8,16 +8,66 @@
   .container {
     max-width: 960px;
   }
+
+  /* ======================== responsive navbar  ========================*/
+  .nav-brand__img {
+    width: 12rem;
+  }
+  .nav-menu-desktop {
+    margin-right: 3rem;
+  }
+  .nav-menu-desktop__item {
+    margin-left: 2rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container {
     max-width: 720px;
+  }
+  body {
+    font-size: 1.4rem;
+  }
+  .sm-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  /* ======================== responsive navbar  ========================*/
+  .nav-brand__img {
+    width: 10rem;
+  }
+  .nav-menu-desktop {
+    margin-right: 2rem;
+  }
+  .nav-menu-desktop__item {
+    margin-left: 1.5rem;
+  }
+  .nav-wrapper-left__login-btn {
+    margin-right: 1rem;
+    padding: 1.2rem 0.8rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+  /* ======================== responsive navbar  ========================*/
+  .nav-menu-desktop {
+    display: none;
+  }
+  .nav-wrapper-right {
+    flex-basis: 100%;
+    border-bottom-left-radius: 0;
+  }
+  .nav__wrapper-right {
+    justify-content: space-between;
+  }
+  .nav-wrapper-left {
+    display: none;
+  }
+  .mobile-nav__left-btns {
+    display: flex;
+    align-items: center;
   }
 }
 

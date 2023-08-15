@@ -173,11 +173,17 @@ button {
   font-family: iran-sans-medium;
   cursor: pointer;
 }
+input {
+  border: none;
+  outline: none;
+  font-family: iran-sans-regular;
+}
 body {
   font-size: 1.6rem;
   font-family: iran-sans-regular, Arial, Helvetica, sans-serif;
   background-color: #f8f8fa;
   direction: rtl;
+  line-height: 2;
 }
 .container {
   width: 100%;
@@ -390,4 +396,80 @@ body {
   display: block;
   margin-top: 2rem;
   text-align: center;
+}
+
+/* 
+  ======================
+    style section home  
+  ======================
+*/
+
+.home {
+  margin-top: 4rem;
+}
+.home-wrapper {
+  display: flex;
+  align-items: center;
+}
+.home-wrapper-img {
+  flex-basis: 50%;
+}
+.home-wrapper__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-wrapper-content {
+  flex-basis: 50%;
+  margin-right: 1rem;
+}
+.home-wrapper-content__title {
+  font-size: 4.5rem;
+  max-width: 32rem;
+  font-weight: bold;
+  line-height: 1.75;
+}
+.home-wrapper-content__title span {
+  color: var(--primary-color);
+}
+.home-wrapper__content {
+  max-width: 52rem;
+}
+.home-wrapper-content__caption {
+  color: #ababac;
+  margin-top: 2rem;
+}
+.home-wrapper__input {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  position: relative;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.home-wrapper-content__input {
+  padding: 1.75rem 2rem;
+  border-radius: 2rem;
+  width: 100%;
+  box-shadow: 0px 14px 23px 0px rgba(12, 12, 12, 0.06);
+}
+.home-wrapper-content__btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: iran-sans-bold;
+  display: flex;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  border-radius: 2.5rem;
+  position: absolute;
+  left: 0;
+}
+.home-wrapper-content__btn svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.home-wrapper-content__btn span {
+  display: block;
+  margin-right: 0.5rem;
 }

@@ -558,8 +558,7 @@ body {
   position: absolute;
   top: 8%;
   z-index: 99;
-  padding-right: 1rem;
-  right: 5%;
+  right: 8%;
 }
 .book-grouping-item:nth-child(5) .book-grouping-item__description {
   color: #111111;

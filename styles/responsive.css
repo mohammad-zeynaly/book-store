@@ -19,6 +19,15 @@
   .nav-menu-desktop__item {
     margin-left: 2rem;
   }
+  /* ======================== responsive section home  ========================*/
+
+  .home-wrapper-content {
+    margin-right: 0;
+  }
+  .home-wrapper-content__title {
+    max-width: 100%;
+    font-size: 4rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container {
@@ -45,6 +54,10 @@
     margin-right: 1rem;
     padding: 1.2rem 0.8rem;
   }
+  /* ======================== responsive section home  ========================*/
+  .home-wrapper-content__title {
+    font-size: 3.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -68,6 +81,20 @@
   .mobile-nav__left-btns {
     display: flex;
     align-items: center;
+  }
+  /* ======================== responsive section home  ========================*/
+  .home-wrapper {
+    flex-direction: column-reverse;
+  }
+  .home-wrapper-content {
+    margin-top: 1.5rem;
+  }
+  .home-wrapper__input {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .home-wrapper-content__title {
+    font-size: 3rem;
   }
 }
 

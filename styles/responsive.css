@@ -58,6 +58,11 @@
   .home-wrapper-content__title {
     font-size: 3.5rem;
   }
+
+  /* ======================== responsive  book grouping  ========================*/
+  .book-grouping-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -101,5 +106,10 @@
 @media only screen and (max-width: 576px) {
   .container {
     max-width: 100%;
+  }
+  /* ======================== responsive section home  ========================*/
+  .home-wrapper-content__input,
+  .home-wrapper-content__btn {
+    padding: 1.5rem 1.25rem;
   }
 }

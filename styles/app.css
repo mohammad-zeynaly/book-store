@@ -210,6 +210,30 @@ body {
   width: 2.5rem;
   height: 2.5rem;
 }
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+.section-heading__title {
+  display: flex;
+  justify-content: center;
+  width: 18rem;
+  border-radius: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  margin: 0 2rem;
+}
+.section-heading__row-1,
+.section-heading__row-2 {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #d8d6d6;
+}
 /* ======================== Start Main  Style  ========================*/
 
 /* 
@@ -472,4 +496,71 @@ body {
 .home-wrapper-content__btn span {
   display: block;
   margin-right: 0.5rem;
+}
+
+/* 
+  ===============================
+    style section book-grouping  
+  ===============================
+*/
+.book-grouping {
+  padding-top: 6rem;
+  background-color: var(--white-color);
+}
+.book-grouping__title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: iran-sans-medium;
+  margin-top: 1.2rem;
+}
+.book-grouping-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 2rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.book-grouping-item {
+  height: fit-content;
+  border-radius: 3rem;
+  position: relative;
+}
+.book-grouping-item:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: linear-gradient(90deg, #105372, #105372);
+}
+.book-grouping-item:nth-child(1) .book-grouping-item__img {
+}
+.book-grouping-item:nth-child(2) .book-grouping-item__img {
+  background-image: linear-gradient(90deg, #26292a, #26292a);
+}
+.book-grouping-item:nth-child(3) .book-grouping-item__img {
+  background-image: linear-gradient(90deg, #ff6600, #ff6600);
+}
+.book-grouping-item:nth-child(4) .book-grouping-item__img {
+  background-image: linear-gradient(90deg, #758bfd, #758bfd);
+}
+.book-grouping-item:nth-child(5) .book-grouping-item__img {
+  background-image: linear-gradient(90deg, #f1f2f6, #f1f2f6);
+}
+.book-grouping-item__img {
+  width: 100%;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+.book-grouping-item__description {
+  color: var(--white-color);
+  font-family: iran-sans-medium;
+  position: absolute;
+  top: 8%;
+  z-index: 99;
+  padding-right: 1rem;
+  right: 5%;
+}
+.book-grouping-item:nth-child(5) .book-grouping-item__description {
+  color: #111111;
 }

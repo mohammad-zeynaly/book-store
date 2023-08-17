@@ -597,6 +597,7 @@ body {
 }
 .best-sellers-box-content__heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   font-size: 1.5rem;
@@ -615,6 +616,10 @@ body {
 .best-sellers-box__title {
   font-family: iran-sans-medium;
   font-size: 1.6rem;
+  transition: all 200ms ease-in;
+}
+.best-sellers-box__title:hover {
+  color: var(--primary-color);
 }
 .best-sellers-box__price {
   font-family: iran-sans-medium;

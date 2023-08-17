@@ -28,6 +28,17 @@
     max-width: 100%;
     font-size: 4rem;
   }
+  /* ======================== responsive section home  ========================*/
+  .best-sellers-boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .best-sellers-box__title {
+    font-family: iran-sans-medium;
+    font-size: 1.5rem;
+  }
+  .best-sellers-box__price {
+    font-family: iran-sans-medium;
+    font-size: 1.4rem;
 }
 @media only screen and (max-width: 992px) {
   .container {
@@ -70,6 +81,11 @@
   .book-grouping-item:nth-child(1) .book-grouping-item__img {
     background-image: linear-gradient(90deg, #105372, #105372);
   }
+
+  /* ======================== responsive section home  ========================*/
+  .best-sellers-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -110,6 +126,10 @@
   .home-wrapper-content__title {
     font-size: 3rem;
   }
+    /* ======================== responsive section home  ========================*/
+  .best-sellers-boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -123,5 +143,14 @@
   .home-wrapper-content__input,
   .home-wrapper-content__btn {
     padding: 1.5rem 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .best-sellers-box-content__heading{
+    flex-direction: column;
+  }
+  .best-sellers-box__price{
+    margin-top: 0.5rem;
   }
 }

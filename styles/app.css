@@ -166,6 +166,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 button {
   background: transparent;
@@ -220,11 +221,12 @@ body {
 .section-heading__title {
   display: flex;
   justify-content: center;
-  width: 18rem;
+  white-space: nowrap;
   border-radius: 1.2rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   font-size: 1.3rem;
+  padding: 0.15rem 1rem;
   margin: 0 2rem;
 }
 .section-heading__row-1,
@@ -234,6 +236,14 @@ body {
   height: 1px;
   background-color: #d8d6d6;
 }
+
+.section__title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: iran-sans-medium;
+  margin-top: 1.2rem;
+}
+
 /* ======================== Start Main  Style  ========================*/
 
 /* 
@@ -504,14 +514,8 @@ body {
   ===============================
 */
 .book-grouping {
-  padding-top: 6rem;
+  padding: 6rem 0;
   background-color: var(--white-color);
-}
-.book-grouping__title {
-  text-align: center;
-  font-size: 3rem;
-  font-family: iran-sans-medium;
-  margin-top: 1.2rem;
 }
 .book-grouping-items {
   display: grid;
@@ -562,4 +566,87 @@ body {
 }
 .book-grouping-item:nth-child(5) .book-grouping-item__description {
   color: #111111;
+}
+
+/* 
+  ===============================
+    style section best-sellers  
+  ===============================
+*/
+.best-sellers {
+  padding-top: 6rem;
+}
+.best-sellers-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.best-sellers-box {
+  overflow: hidden;
+  border-radius: 3rem;
+  padding: 1.6rem;
+  background-color: var(--white-color);
+}
+.best-sellers-box__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.best-sellers-box-content__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.best-sellers-box-img {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  height: 25rem;
+}
+.best-sellers-box__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.best-sellers-box__title {
+  font-family: iran-sans-medium;
+  font-size: 1.6rem;
+}
+.best-sellers-box__price {
+  font-family: iran-sans-medium;
+}
+.best-sellers-box__btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.8rem 2rem;
+  border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-family: iran-sans-bold;
+  margin: 1rem auto 0 auto;
+  transition: all 200ms ease-in;
+}
+.best-sellers-box__btn:hover {
+  background-color: #7a8cdf;
+}
+.best-sellers-box__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 0.5rem;
+}
+.best-sellers-all__product-btn {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+.best-sellers__btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.75rem 1rem;
+  border-radius: 2.5rem;
+  font-size: 1.4rem;
 }

@@ -131,6 +131,14 @@
   .best-sellers-boxes {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  /* ========================== style section comments  ==========================*/
+  .swiper-slide {
+    opacity: 0.5;
+  }
+  .swiper-slide-active {
+    opacity: 1;
+  } 
 }
 
 @media only screen and (max-width: 576px) {

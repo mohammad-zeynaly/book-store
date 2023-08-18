@@ -668,7 +668,7 @@ body {
   padding-top: 5rem !important;
 }
 .swiper-slide {
-  opacity: 0.5 !important;
+  opacity: 0.5;
 }
 .swiper-slide-next {
   opacity: 1 !important;
@@ -677,10 +677,12 @@ body {
   background-color: var(--white-color);
   padding: 4rem;
   border-radius: 3rem;
-  box-shadow: 0px 33px 76px 0px rgba(12, 12, 12, 0.06);
+  box-shadow: rgba(12, 12, 12, 0.150) -2px 1px 12px;
+  overflow: h;
   position: relative;
 }
 .comments-slider-item__text {
+  font-size: 1.5rem;
 }
 .comments-slider-item__detail {
   display: flex;

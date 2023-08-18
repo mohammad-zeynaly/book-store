@@ -87,6 +87,11 @@
   .best-sellers-boxes {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* ======================== responsive section writers  ========================*/
+  .writers-box {
+    width: 48%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -138,7 +143,7 @@
   }
   .swiper-slide-active {
     opacity: 1;
-  } 
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -152,6 +157,10 @@
   .home-wrapper-content__input,
   .home-wrapper-content__btn {
     padding: 1.5rem 1.25rem;
+  }
+  /* ======================== responsive section writers  ========================*/
+  .writers-box {
+    width: 100%;
   }
 }
 

@@ -665,7 +665,7 @@ body {
   background-color: var(--white-color);
 }
 .comments-slider {
-  padding-top: 5rem !important;
+  padding-top: 3rem !important;
 }
 .swiper-slide {
   opacity: 0.5;
@@ -717,6 +717,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 7rem;
+  padding-bottom: 5rem;
   gap: 1rem;
 }
 .swiper-button-prev::after,
@@ -741,14 +742,22 @@ body {
   right: 45% !important;
 }
 
+/* 
+  ==========================
+    style section writers  
+  ==========================
+*/
 .writers {
   padding-top: 6rem;
+  padding-bottom: 5rem;
 }
 .writers-boxes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  padding-top: 3rem;
 }
 .writers-box {
   width: 24%;
@@ -809,4 +818,5 @@ body {
 }
 .writers-box__caption {
   color: #999999;
+  font-size: 1.5rem;
 }

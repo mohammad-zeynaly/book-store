@@ -820,3 +820,61 @@ body {
   color: #999999;
   font-size: 1.5rem;
 }
+
+/* 
+  ==========================
+    style section writers  
+  ==========================
+*/
+.footer {
+  padding-top: 6rem;
+  background-color: #f1f2f6;
+}
+.footer-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+.footer-item {
+  border-right: 1px solid #dedede;
+  padding-right: 2rem;
+}
+.footer-item__img {
+  width: 15rem;
+}
+.footer-item__description {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.footer-item {
+}
+.footer-item--caption {
+  padding-left: 1.5rem;
+}
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer-menu__title {
+  margin-bottom: 1rem;
+  font-family: iran-sans-medium;
+}
+.footer-menu__item {
+  margin-bottom: 0.4rem;
+}
+.footer-menu__link {
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 150ms ease-in;
+}
+.footer-menu__link:hover {
+  color: var(--primary-color);
+}
+.footer__copy-right {
+  border-top: 1px solid #dedede;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  user-select: none;
+}

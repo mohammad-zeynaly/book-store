@@ -10,7 +10,8 @@
   }
 
   /* ======================== responsive navbar  ========================*/
-  .nav-brand__img {
+  .nav-brand__img,
+  .footer-item__img {
     width: 12rem;
   }
   .nav-menu-desktop {
@@ -53,7 +54,8 @@
     height: 2.1rem;
   }
   /* ======================== responsive navbar  ========================*/
-  .nav-brand__img {
+  .nav-brand__img,
+  .footer-item__img {
     width: 10rem;
   }
   .nav-menu-desktop {

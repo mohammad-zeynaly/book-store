@@ -39,6 +39,7 @@
   .best-sellers-box__price {
     font-family: iran-sans-medium;
     font-size: 1.4rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container {
@@ -126,7 +127,7 @@
   .home-wrapper-content__title {
     font-size: 3rem;
   }
-    /* ======================== responsive section home  ========================*/
+  /* ======================== responsive section home  ========================*/
   .best-sellers-boxes {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -147,10 +148,10 @@
 }
 
 @media only screen and (max-width: 360px) {
-  .best-sellers-box-content__heading{
+  .best-sellers-box-content__heading {
     flex-direction: column;
   }
-  .best-sellers-box__price{
+  .best-sellers-box__price {
     margin-top: 0.5rem;
   }
 }

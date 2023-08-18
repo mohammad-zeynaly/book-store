@@ -8,13 +8,13 @@ const mobileMenuContainer = document.querySelector(".mobile-menu");
 const mobileMenuBtn = document.querySelector("#mobile-nav__btn");
 const mobileMenuCloseBtn = document.querySelector(".mobile-menu__close-btn");
 const bestSellersProducts = document.querySelector("#bestSellersProducts");
-// is show mobile menu
 
 const overlayShowHandler = () => {
   overlayContainer.classList.remove("overlay");
   mobileMenuContainer.classList.remove("mobile-menu--open");
 };
 
+// is show mobile menu
 const mobileMenuShowHandler = () => {
   mobileMenuContainer.classList.toggle("mobile-menu--open");
   overlayContainer.classList.toggle("overlay");
@@ -65,6 +65,35 @@ allProducts.map((product) => {
               </span>
             </div>`
   );
+});
+
+// swiper slider configuration
+const commentSwiperSlider = new Swiper(".comments-slider", {
+  slidesPerGroup: 1,
+  slidesPerView: 1,
+  loop: true,
+
+  spaceBetween: 20,
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+      loopedSlides: 3,
+    },
+
+    threshold: 10,
+    touchRatio: 0.5,
+  },
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  scrollbars: false,
 });
 
 // set events

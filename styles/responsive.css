@@ -94,6 +94,24 @@
   .writers-box {
     width: 48%;
   }
+  /* ======================== responsive footer ========================*/
+
+  .footer-items {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 0;
+  }
+  .footer-item {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+  .footer-item--caption {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .footer-item__description {
+    font-size: 1.4rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -163,6 +181,25 @@
   /* ======================== responsive section writers  ========================*/
   .writers-box {
     width: 100%;
+  }
+
+  /* ======================== responsive footer ========================*/
+
+  .footer-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-item--caption {
+    padding-left: 0;
+    padding: 0 1rem 2rem 1rem;
+  }
+  .footer-item {
+    border: none;
+  }
+  .footer__copy-right {
+    font-size: 1.4rem;
+  }
+  .footer-item__description {
+    margin-top: 0.4rem;
   }
 }
 

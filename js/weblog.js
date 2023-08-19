@@ -17,7 +17,7 @@ const allWeblogsGenerator = () => {
               </a>
               <span class="weblog-item__description">
                 <a href="./weblogDetails.html?id=${id}" class="weblog-item__title"
-                  > ${title}} </a
+                  > ${title} </a
 
                 >
                 <p class="weblog-item__caption">

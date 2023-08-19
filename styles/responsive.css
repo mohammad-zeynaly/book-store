@@ -41,6 +41,11 @@
     font-family: iran-sans-medium;
     font-size: 1.4rem;
   }
+
+  /* ======================== responsive page weblog  ========================*/
+  .weblog-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (max-width: 992px) {
   .container {
@@ -112,6 +117,12 @@
   .footer-item__description {
     font-size: 1.4rem;
   }
+
+  /* ======================== responsive page weblog  ========================*/
+
+  .weblog-item-img {
+    height: 29rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -164,6 +175,11 @@
   .swiper-slide-active {
     opacity: 1;
   }
+
+  /* ======================== responsive page weblog  ========================*/
+  .weblog-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -200,6 +216,11 @@
   }
   .footer-item__description {
     margin-top: 0.4rem;
+  }
+
+  /* ======================== responsive page weblog  ========================*/
+  .weblog__title {
+    text-align: center;
   }
 }
 

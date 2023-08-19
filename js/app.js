@@ -67,35 +67,6 @@ allProducts.map((product) => {
   );
 });
 
-// swiper slider configuration
-const commentSwiperSlider = new Swiper(".comments-slider", {
-  slidesPerGroup: 1,
-  slidesPerView: 1,
-  loop: true,
-
-  spaceBetween: 20,
-  breakpoints: {
-    576: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-      loopedSlides: 3,
-    },
-
-    threshold: 10,
-    touchRatio: 0.5,
-  },
-  navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
-  },
-  scrollbars: false,
-});
-
 // set events
 overlayContainer.addEventListener("click", overlayShowHandler);
 mobileMenuBtn.addEventListener("click", mobileMenuShowHandler);

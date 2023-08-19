@@ -51,7 +51,12 @@
                     </a>
                   </li>
                   <li class="nav-menu-desktop__item">
-                    <a href="#" class="nav-menu-desktop__link"> وبلاگ </a>
+                    <a
+                      href="./pages/weblog.html"
+                      class="nav-menu-desktop__link"
+                    >
+                      وبلاگ
+                    </a>
                   </li>
                   <li class="nav-menu-desktop__item">
                     <a href="#" class="nav-menu-desktop__link"> تماس با ما</a>
@@ -112,7 +117,12 @@
                       </a>
                     </li>
                     <li class="nav-menu-mobile__item">
-                      <a href="#" class="nav-menu-mobile__link"> وبلاگ </a>
+                      <a
+                        href="./pages/weblog.html"
+                        class="nav-menu-mobile__link"
+                      >
+                        وبلاگ
+                      </a>
                     </li>
                     <li class="nav-menu-mobile__item">
                       <a href="#" class="nav-menu-mobile__link">
@@ -797,6 +807,36 @@
     </footer>
 
     <script src="./js/swiper-min.js"></script>
+    <script type="text/javascript">
+      // swiper slider configuration
+      const commentSwiperSlider = new Swiper(".comments-slider", {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        loop: true,
+
+        spaceBetween: 20,
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+            loopedSlides: 3,
+          },
+
+          threshold: 10,
+          touchRatio: 0.5,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+        scrollbars: false,
+      });
+    </script>
     <script src="js/app.js" type="module"></script>
   </body>
 </html>

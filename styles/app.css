@@ -588,6 +588,7 @@ body {
   border-radius: 3rem;
   padding: 1.6rem;
   background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 .best-sellers-box__content {
   display: flex;

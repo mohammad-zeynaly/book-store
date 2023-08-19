@@ -128,6 +128,7 @@ table {
 :root {
   --primary-color: #758bfd;
   --white-color: #ffffff;
+  --secondary-color: #f8f8fa;
 }
 
 /* ======================== Css Fonts Add  ========================*/
@@ -182,7 +183,7 @@ input {
 body {
   font-size: 1.6rem;
   font-family: iran-sans-regular, Arial, Helvetica, sans-serif;
-  background-color: #f8f8fa;
+  background-color: var(--secondary-color);
   direction: rtl;
   line-height: 2;
 }
@@ -1031,4 +1032,83 @@ body {
   width: 1.3rem;
   height: 1.3rem;
   stroke: var(--primary-color);
+}
+
+/* 
+  =============================
+    style page weblog details  
+  =============================
+*/
+
+.weblog-details {
+  padding-top: 6rem;
+  background-color: var(--white-color);
+}
+.weblog-details__wrapper {
+  display: flex;
+  align-items: start;
+  column-gap: 2rem;
+}
+.weblog-details__description {
+  width: 70%;
+}
+.weblog-details__article {
+}
+.weblog-details__title {
+  font-size: 1.8rem;
+  font-family: iran-sans-medium;
+}
+.weblog-details__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+.weblog-details__caption {
+}
+.weblog-details__sidebar {
+  width: 30%;
+}
+.weblog-details-tags,
+.weblog-details-ads {
+  background-color: rgba(240, 240, 240, 0.66);
+  border-radius: 3rem;
+  padding: 1.6rem;
+  margin-top: 6rem;
+}
+.weblog-details-tags__title {
+  display: block;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  text-align: center;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.weblog-details-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.weblog-details__label {
+  font-size: 1.2rem;
+  font-family: iran-sans-medium;
+  cursor: pointer;
+  background-color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  transition: all 150ms ease-in;
+}
+.weblog-details__label:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.weblog-details-ads {
+  margin-top: 4rem;
+}
+.weblog-details-ads__title {
+  margin-top: 2rem;
+  border-radius: 3rem;
 }

@@ -3,7 +3,523 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png" />
+    <!-- all style project -->
+    <link rel="stylesheet" href="../styles/app.css" />
+    <!-- all responsive project -->
+    <link rel="stylesheet" href="../styles/responsive.css" />
     <title>جزئیات مقاله</title>
   </head>
-  <body></body>
+  <body>
+    <!-- overlay container-->
+    <div id="overlay" class=""></div>
+    <!-- add class overlay in show overlay-->
+
+    <!-- header content site-->
+    <header class="container header">
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div class="nav-wrapper-right">
+            <div class="container">
+              <div class="nav__wrapper-right">
+                <!-- header brand name -->
+                <a href="../index.html" class="nav-brand">
+                  <img
+                    class="nav-brand__img"
+                    src="../assets/images/logo.png"
+                    alt="لوگو برند"
+                  />
+                </a>
+                <!-- header menu -->
+                <ul class="nav-menu-desktop">
+                  <li class="nav-menu-desktop__item">
+                    <a href="../index.html" class="nav-menu-desktop__link"
+                      >صفحه اصلی</a
+                    >
+                  </li>
+                  <li class="nav-menu-desktop__item">
+                    <a href="./booksStore.html" class="nav-menu-desktop__link">
+                      کتاب ها
+                    </a>
+                  </li>
+                  <li class="nav-menu-desktop__item">
+                    <a
+                      href="./weblog.html"
+                      class="nav-menu-desktop__link nav-menu-desktop__link--active"
+                    >
+                      وبلاگ
+                    </a>
+                  </li>
+                  <li class="nav-menu-desktop__item">
+                    <a href="#" class="nav-menu-desktop__link"> تماس با ما</a>
+                  </li>
+                  <li class="nav-menu-desktop__item">
+                    <a href="#" class="nav-menu-desktop__link"> درباره ما </a>
+                  </li>
+                </ul>
+
+                <div class="mobile-nav__left-btns">
+                  <button class="mobile-nav__btn" id="mobile-nav__btn">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="sm-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      />
+                    </svg>
+                  </button>
+                  <button class="mobile-basket__btn">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="sm-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="mobile-menu">
+                  <ul class="nav-menu-mobile">
+                    <li class="nav-menu-mobile__item">
+                      <a href="../index.html" class="nav-menu-mobile__link"
+                        >صفحه اصلی</a
+                      >
+                    </li>
+                    <li class="nav-menu-mobile__item">
+                      <a href="./booksStore.html" class="nav-menu-mobile__link">
+                        کتاب ها
+                      </a>
+                    </li>
+                    <li class="nav-menu-mobile__item">
+                      <a
+                        href="./weblog.html"
+                        class="nav-menu-mobile__link nav-menu-mobile__link--active"
+                      >
+                        وبلاگ
+                      </a>
+                    </li>
+                    <li class="nav-menu-mobile__item">
+                      <a href="#" class="nav-menu-mobile__link">
+                        سوالات متداول
+                      </a>
+                    </li>
+                    <li class="nav-menu-mobile__item">
+                      <a href="#" class="nav-menu-mobile__link"> تماس با ما</a>
+                    </li>
+                    <li class="nav-menu-mobile__item">
+                      <a href="#" class="nav-menu-mobile__link"> درباره ما </a>
+                    </li>
+                  </ul>
+                  <div class="mobile-menu__icons">
+                    <div class="mobile-menu-icons">
+                      <span class="mobile-menu-icons__icon">
+                        <svg viewBox="0 0 24 24" fill="none" class="sm-icon">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                            fill="#ffffff"
+                          />
+                          <path
+                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                            fill="#ffffff"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                            fill="#ffffff"
+                          />
+                        </svg>
+                      </span>
+                      <span class="mobile-menu-icons__icon">
+                        <svg viewBox="0 0 24 24" fill="none" class="sm-icon">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z"
+                            fill="#ffffff"
+                          />
+                        </svg>
+                      </span>
+                      <span class="mobile-menu-icons__icon">
+                        <svg viewBox="-5 0 20 20" class="sm-icon">
+                          <g
+                            id="Page-1"
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <g
+                              id="Dribbble-Light-Preview"
+                              transform="translate(-385.000000, -7399.000000)"
+                              fill="#ffffff"
+                            >
+                              <g
+                                id="icons"
+                                transform="translate(56.000000, 160.000000)"
+                              >
+                                <path
+                                  d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                  id="facebook-[#176]"
+                                ></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                    </div>
+                    <span class="mobile-menu__copy-right">© کپی رایت ۲۰۲۳</span>
+                  </div>
+                  <span class="mobile-menu__close-btn"
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-wrapper-left">
+            <div class="container">
+              <div class="nav__wrapper-left">
+                <button class="nav-wrapper-left__basket-btn">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sm-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                  </svg>
+                </button>
+                <button class="nav-wrapper-left__login-btn">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sm-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                  <span> ورود / ثبت نام </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main content site-->
+    <main class="main">
+      <section class="weblog-details">
+        <div class="container">
+          <div class="weblog-details__wrapper">
+            <div class="weblog-details__description">
+              <article class="weblog-details__article">
+                <h1 class="weblog-details__title">
+                  چگونه می توان یک لوگو مانند یک حرفه ای ایجاد کرد
+                </h1>
+                <img
+                  class="weblog-details__image"
+                  src="../assets/images/weblogs/weblog-1.jpg"
+                  alt=" عکس وبلاگ "
+                />
+                <p class="weblog-details__caption">
+                  تاب مجموعه‌ای از صفحاتِ نوشته شده، مصوّر، چاپ شده یا صفحات
+                  خالی (صفحه سفید و نانوشته)؛ ساخته شده از جوهر، کاغذ (ورق)،
+                  پوست حیوانات یا مواد دیگر (چسب، نخ و…) است که معمولاً از یک
+                  طرف (سمت راست یا چپ) به یکدیگر محکم شده یا وصل می‌شوند. هر
+                  برگه در کتاب، ورق و هر سمت یا روی هر ورق، صفحه نامیده می‌شود.
+                </p>
+                <p class="weblog-details__caption">
+                  به جلد کردن کتاب به اصطلاح صحافی گفته می‌شود. کتاب در
+                  اندازه‌هایِ گوناگون دیده می‌شود. در ایران، قطع رحلی، وزیری و
+                  جیبی از مشهورترین قطع‌های کتاب است. کوچک‌ترین کتاب دنیا یک
+                  انجیل است که در موزهٔ کلیسای وانک اصفهان نگهداری می‌شود. اولین
+                  کتاب به زبان فارسی در هند و به دست یک ارمنی به زیور طبع آراسته
+                  شده‌است.٢٠ دقیقه انتظار از انواع دیگر کتاب، کتاب دیجیتالی است
+                  که کتاب در قالب بسته‌های نرم‌افزاری مانندِ پی‌دی‌اف یا ئی‌پاب
+                  ارائه می‌شود که وسایلی نیز به نام کتابخوان الکترونیکی مانندِ
+                  آمازون کیندل برای خواندن آن به کار می‌رود. نمونهٔ دیگری از
+                  کتاب غیرِ چاپّی کتاب صوتی است، یعنی کتاب‌هایی که توسط فرد یا
+                  افرادی خوانده و گاهی به صورت نمایشنامه اجرا می‌شوند. این
+                  کتاب‌ها ممکن است با موسیقی و افکت همراه باشند..
+                </p>
+                <p class="weblog-details__caption">
+                  واژه کتاب از زبان عربی وارد فارسی شده‌است. در فارسی میانه
+                  «نامک» (به فارسی دری «نامه») به‌طور عمومی به کتاب اطلاق می‌شد
+                  و فروردگ به آنچه امروز عموماً نامه خوانده می‌شود. در دورهٔ
+                  تکوین فارسی دری نیز نامه به معنی مطلق کتاب به کار رفته‌است. در
+                  فارسی میانه، از اصطلاحات تخصصی‌تر ماتیکان (رساله) و نسک (برای
+                  بخش‌های اوستا) استفاده شده‌است. کلمهٔ نُبی که هم‌ریشه با نبشتن
+                  (نگاشتن) است و معنای مطلق کتاب یا نوشته از آن مستفاد تواند شد،
+                  در فارسی دری به معنی خاص قرآن به کار رفته‌است.
+                </p>
+              </article>
+
+              <div class="weblog-details-comments">
+                <span
+                  class="weblog-details-comments__count"
+                  id="comments__count"
+                >
+                  3نظر
+                </span>
+
+                <div
+                  class="weblog-details-comments__items"
+                  id="allWeblogComments"
+                >
+                  <div class="weblog-details-comments-item">
+                    <div class="weblog-details-comments-item-heading">
+                      <span
+                        class="weblog-details-comments-item-heading__user-detail"
+                      >
+                        <img
+                          class="weblog-details-comments-item-heading__img"
+                          src="../assets/images/users/user-1.jpg"
+                          alt="عکس کاربر"
+                        />
+                        <span>مریم گفته:</span>
+                      </span>
+                      <span class="weblog-details-comments-item-heading__date"
+                        >28 مرداد 1402 ساعت16:30
+                      </span>
+                    </div>
+                    <p class="weblog-details-comments-item__body">
+                      تا به حال از همچین سایتی خوشم نیومده بود ! انتخاب بی‌نظیر
+                      کتاب‌ها، طراحی زیبا و راحتی استفاده از سایت همه چیزشون
+                      عالیه. حقیقتاً بهتون تبریک میگم که یک فضای خیلی خوب برای
+                      علاقه‌مندان کتاب ایجاد کردید
+                    </p>
+                  </div>
+                  <div class="weblog-details-comments-item">
+                    <div class="weblog-details-comments-item-heading">
+                      <span
+                        class="weblog-details-comments-item-heading__user-detail"
+                      >
+                        <img
+                          class="weblog-details-comments-item-heading__img"
+                          src="../assets/images/users/user-2.png"
+                          alt="عکس کاربر"
+                        />
+                        <span>داوود گفته:</span>
+                      </span>
+                      <span class="weblog-details-comments-item-heading__date"
+                        >25 مرداد 1402 ساعت16:30
+                      </span>
+                    </div>
+                    <p class="weblog-details-comments-item__body">
+                      این سایت اکسترا بوک خیلی باحاله، همه کتابا رو داره واسه هر
+                      سلیقه‌ای. اسمش فقط اون قدر خوش چین شده که یه کاربر که اهل
+                      کتاب خواندن هم نیست، هم حس می‌کنه دلش می‌خواد کلی کتاب
+                      بخره
+                    </p>
+                  </div>
+                  <div class="weblog-details-comments-item">
+                    <div class="weblog-details-comments-item-heading">
+                      <span
+                        class="weblog-details-comments-item-heading__user-detail"
+                      >
+                        <img
+                          class="weblog-details-comments-item-heading__img"
+                          src="../assets/images/users/user-3.jpg"
+                          alt="عکس کاربر"
+                        />
+                        <span>زهرا گفته:</span>
+                      </span>
+                      <span class="weblog-details-comments-item-heading__date"
+                        >21 مرداد 1402 ساعت11:25
+                      </span>
+                    </div>
+                    <p class="weblog-details-comments-item__body">
+                      وای چه سایتیه این اکسترا بوک! هر کدوم از کتاباش یه بعد
+                      دیگه ای دارن که نمیشه ازشون چشم پوشید. مطمئنم اینجا همه
+                      عمیق ترین و مفیدترین کتابا رو پیدا می‌کنید. حتما سر بزنید
+                      و زندگیتون رو بهتر کنید!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <form action="#" class="weblog-details-form">
+                <h4 class="weblog-details-form__title">دیدگاهتان را بنویسید</h4>
+                <p class="weblog-details-form__caption">
+                  نشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز علامت‌گذاری
+                  شده‌اند *
+                </p>
+                <div class="weblog-details-form-input">
+                  <label for="comment" class="weblog-details-form__label"
+                    >دیدگاه *
+                  </label>
+                  <textarea
+                    class="weblog-details-form__input"
+                    name="comment"
+                    id="comment"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <div class="weblog-details-form-inputs">
+                  <div class="weblog-details-form-input">
+                    <label for="comment" class="weblog-details-form__label"
+                      >نام *
+                    </label>
+                    <input
+                      type="text"
+                      class="weblog-details-form__input"
+                      name="name"
+                      id="name"
+                    />
+                  </div>
+                  <div class="weblog-details-form-input">
+                    <label for="comment" class="weblog-details-form__label"
+                      >ایمیل *
+                    </label>
+                    <input
+                      type="email"
+                      class="weblog-details-form__input"
+                      name="email"
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <button>فرستادن دیدگاه</button>
+              </form>
+            </div>
+            <aside class="weblog-details__sidebar">
+              <div class="weblog-details-tags">
+                <span class="weblog-details-tags__title">برچسب ها </span>
+                <div class="weblog-details-labels">
+                  <span class="weblog-details__label">آموزش </span>
+                  <span class="weblog-details__label"> توسعه دهنده </span>
+                  <span class="weblog-details__label"> سئو </span>
+                  <span class="weblog-details__label"> سایت اینترنتی </span>
+                  <span class="weblog-details__label"> عکاسی </span>
+                  <span class="weblog-details__label"> فرا گرفتن </span>
+                  <span class="weblog-details__label"> فن آوری </span>
+                  <span class="weblog-details__label"> مصاحبه </span>
+                  <span class="weblog-details__label"> معروف </span>
+                  <span class="weblog-details__label"> مقاله </span>
+                  <span class="weblog-details__label"> وردپرس </span>
+                  <span class="weblog-details__label"> پست </span>
+                  <span class="weblog-details__label"> پول </span>
+                  <span class="weblog-details__label"> کامپیوتر </span>
+                </div>
+              </div>
+              <div class="weblog-details-ads">
+                <span class="weblog-details-tags__title"> تبلیغات </span>
+                <img
+                  class="weblog-details-ads__title"
+                  src="../assets/images/ads.jpg"
+                  alt="جای تبلیغات شما"
+                />
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer content site-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-items">
+          <div class="footer-item footer-item--caption">
+            <img
+              class="footer-item__img"
+              src="../assets/images/logo.png"
+              alt="عکس لوگو"
+            />
+            <p class="footer-item__description">
+              همان باشید که هستید و آنچه را که احساس می کنید بگویید ، زیرا کسانی
+              که اهمیت می دهند اهمیتی ندارند .
+            </p>
+          </div>
+          <ul class="footer-item footer-menu">
+            <h6 class="footer-menu__title">منو سفارشی</h6>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> صفحه اصلی </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> کتاب ها </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> مجموعه </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> دسته بندی </a>
+            </li>
+          </ul>
+          <ul class="footer-item footer-menu">
+            <h6 class="footer-menu__title">پشتیبانی</h6>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> سوالات متداول </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> قوانین </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> سیاست ها و قوانین </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> گزارش </a>
+            </li>
+          </ul>
+          <ul class="footer-item footer-menu">
+            <h6 class="footer-menu__title">درباره ما</h6>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> درباره ما </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> شرکا </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> چشم اندز</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link"> تماس با ما </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy-right">
+        طراحی و توسعه توسط محمد زینالی - شهریور -1402
+      </p>
+    </footer>
+    <script src="../js/general.js" type="module"></script>
+  </body>
 </html>

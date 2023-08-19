@@ -297,7 +297,21 @@
                   class="weblog-details-comments__count"
                   id="comments__count"
                 >
-                  3نظر
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="weblog-details-comments__icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                    />
+                  </svg>
+
+                  3 نظر
                 </span>
 
                 <div
@@ -314,10 +328,13 @@
                           src="../assets/images/users/user-1.jpg"
                           alt="عکس کاربر"
                         />
-                        <span>مریم گفته:</span>
+                        <span
+                          class="weblog-details-comments-item-heading__title"
+                          >مریم گفته:</span
+                        >
                       </span>
                       <span class="weblog-details-comments-item-heading__date"
-                        >28 مرداد 1402 ساعت16:30
+                        >۲۷ مرداد ۱۳۹۹ ساعت ۱۶:۳۰
                       </span>
                     </div>
                     <p class="weblog-details-comments-item__body">
@@ -337,10 +354,13 @@
                           src="../assets/images/users/user-2.png"
                           alt="عکس کاربر"
                         />
-                        <span>داوود گفته:</span>
+                        <span
+                          class="weblog-details-comments-item-heading__title"
+                          >داوود گفته:</span
+                        >
                       </span>
                       <span class="weblog-details-comments-item-heading__date"
-                        >25 مرداد 1402 ساعت16:30
+                        >۲۴ مرداد ۱۳۹۹ ساعت ۱۷:۳۵
                       </span>
                     </div>
                     <p class="weblog-details-comments-item__body">
@@ -360,10 +380,13 @@
                           src="../assets/images/users/user-3.jpg"
                           alt="عکس کاربر"
                         />
-                        <span>زهرا گفته:</span>
+                        <span
+                          class="weblog-details-comments-item-heading__title"
+                          >زهرا گفته:</span
+                        >
                       </span>
                       <span class="weblog-details-comments-item-heading__date"
-                        >21 مرداد 1402 ساعت11:25
+                        >۲۳ مرداد ۱۳۹۹ ساعت ۱۹:۵۵
                       </span>
                     </div>
                     <p class="weblog-details-comments-item__body">
@@ -374,52 +397,53 @@
                     </p>
                   </div>
                 </div>
+                <form action="#" class="weblog-details-form">
+                  <h4 class="weblog-details-form__title">
+                    دیدگاهتان را بنویسید
+                  </h4>
+                  <p class="weblog-details-form__caption">
+                    نشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز
+                    علامت‌گذاری شده‌اند *
+                  </p>
+                  <div class="weblog-details-form-input">
+                    <label for="comment" class="weblog-details-form__label"
+                      >دیدگاه *
+                    </label>
+                    <textarea
+                      class="weblog-details-form__input"
+                      name="comment"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <div class="weblog-details-form-inputs">
+                    <div class="weblog-details-form-input">
+                      <label for="comment" class="weblog-details-form__label"
+                        >نام *
+                      </label>
+                      <input
+                        type="text"
+                        class="weblog-details-form__input"
+                        name="name"
+                        id="name"
+                      />
+                    </div>
+                    <div class="weblog-details-form-input">
+                      <label for="comment" class="weblog-details-form__label"
+                        >ایمیل *
+                      </label>
+                      <input
+                        type="email"
+                        class="weblog-details-form__input"
+                        name="email"
+                        id="email"
+                      />
+                    </div>
+                  </div>
+                  <button>فرستادن دیدگاه</button>
+                </form>
               </div>
-
-              <form action="#" class="weblog-details-form">
-                <h4 class="weblog-details-form__title">دیدگاهتان را بنویسید</h4>
-                <p class="weblog-details-form__caption">
-                  نشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز علامت‌گذاری
-                  شده‌اند *
-                </p>
-                <div class="weblog-details-form-input">
-                  <label for="comment" class="weblog-details-form__label"
-                    >دیدگاه *
-                  </label>
-                  <textarea
-                    class="weblog-details-form__input"
-                    name="comment"
-                    id="comment"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
-                <div class="weblog-details-form-inputs">
-                  <div class="weblog-details-form-input">
-                    <label for="comment" class="weblog-details-form__label"
-                      >نام *
-                    </label>
-                    <input
-                      type="text"
-                      class="weblog-details-form__input"
-                      name="name"
-                      id="name"
-                    />
-                  </div>
-                  <div class="weblog-details-form-input">
-                    <label for="comment" class="weblog-details-form__label"
-                      >ایمیل *
-                    </label>
-                    <input
-                      type="email"
-                      class="weblog-details-form__input"
-                      name="email"
-                      id="email"
-                    />
-                  </div>
-                </div>
-                <button>فرستادن دیدگاه</button>
-              </form>
             </div>
             <aside class="weblog-details__sidebar">
               <div class="weblog-details-tags">
@@ -442,9 +466,9 @@
                 </div>
               </div>
               <div class="weblog-details-ads">
-                <span class="weblog-details-tags__title"> تبلیغات </span>
+                <span class="weblog-details-ads__title"> تبلیغات </span>
                 <img
-                  class="weblog-details-ads__title"
+                  class="weblog-details-ads__img"
                   src="../assets/images/ads.jpg"
                   alt="جای تبلیغات شما"
                 />

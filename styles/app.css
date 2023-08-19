@@ -1042,6 +1042,7 @@ body {
 
 .weblog-details {
   padding-top: 6rem;
+  padding-bottom: 6rem;
   background-color: var(--white-color);
 }
 .weblog-details__wrapper {
@@ -1065,9 +1066,16 @@ body {
   margin-top: 2rem;
 }
 .weblog-details__caption {
+  font-size: 1.5rem;
+  line-height: 2.5;
+  margin-bottom: 2rem;
 }
 .weblog-details__sidebar {
   width: 30%;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  max-height: 80rem;
 }
 .weblog-details-tags,
 .weblog-details-ads {
@@ -1076,7 +1084,8 @@ body {
   padding: 1.6rem;
   margin-top: 6rem;
 }
-.weblog-details-tags__title {
+.weblog-details-tags__title,
+.weblog-details-ads__title {
   display: block;
   color: var(--white-color);
   background-color: var(--primary-color);
@@ -1084,6 +1093,7 @@ body {
   border-radius: 3rem;
   margin-top: 1rem;
   padding: 0.5rem;
+  cursor: pointer;
 }
 .weblog-details-labels {
   display: flex;
@@ -1111,4 +1121,67 @@ body {
 .weblog-details-ads__title {
   margin-top: 2rem;
   border-radius: 3rem;
+}
+.weblog-details-ads__img {
+  margin-top: 2rem;
+  border-radius: 3rem;
+}
+.weblog-details-comments {
+  background-color: rgba(240, 240, 240, 0.66);
+  border-radius: 3rem;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+.weblog-details-comments__count {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  column-gap: 1rem;
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+.weblog-details-comments__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.weblog-details-comments__items {
+  margin-top: 3rem;
+}
+.weblog-details-comments-item {
+  background-color: var(--white-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+.weblog-details-comments-item-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.weblog-details-comments-item-heading__user-detail {
+  display: flex;
+  align-items: center;
+}
+.weblog-details-comments-item-heading__img {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+.weblog-details-comments-item-heading__title {
+  font-size: 1.4rem;
+  padding-right: 1rem;
+}
+.weblog-details-comments-item-heading__date {
+  font-size: 1.4rem;
+}
+.weblog-details-comments-item__body {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  line-height: 2.1;
 }

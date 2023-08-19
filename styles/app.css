@@ -820,7 +820,6 @@ body {
   color: #999999;
   font-size: 1.5rem;
 }
-
 /* 
   ==========================
     style section writers  
@@ -877,4 +876,72 @@ body {
   text-align: center;
   font-size: 1.5rem;
   user-select: none;
+}
+
+/* 
+  ==========================
+    style page booksStore  
+  ==========================
+*/
+.best-sellers-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+.best-sellers-heading__title {
+  font-size: 2.1rem;
+  font-family: iran-sans-medium;
+}
+.best-sellers-heading__select {
+  font-family: iran-sans-medium;
+  border: 1px solid rgba(117, 139, 253, 0.2);
+  padding: 1.5rem 2.5rem;
+  outline: none;
+  border-radius: 3rem;
+  appearance: none;
+}
+.best-sellers-heading__option {
+  padding-left: 2rem;
+  margin-left: 2rem;
+}
+.best-sellers-heading__left {
+  position: relative;
+}
+.best-sellers-heading-icon {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 1rem;
+  padding-right: 1rem;
+}
+.best-sellers-heading__icon {
+  fill: rgb(113, 118, 123);
+  width: 1.6rem;
+  height: 1.6rem;
+  pointer-events: none;
+}
+
+.best-sellers-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 5rem;
+}
+.best-sellers-pagination__btn {
+  color: var(--primary-color);
+  border: 1px solid rgba(117, 139, 253, 0.4);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.best-sellers-pagination__btn--active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }

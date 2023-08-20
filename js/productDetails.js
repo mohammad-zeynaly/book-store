@@ -1,20 +1,41 @@
 "use strict";
+import { allProducts } from "../data/allData.js";
 // select element in dom
-const productDetailsImg = document.querySelector(".product-details__img");
+const productTitle = document.querySelector(".product-details-content__title");
+const productImage = document.querySelector(".product-details__img");
+const productPriceReal = document.querySelector(
+  ".product-details-content__price-real"
+);
+const productPriceDiscount = document.querySelector(
+  ".product-details-content__price-discount"
+);
+const urlParams = new URLSearchParams(location.search);
+const mainProductId = urlParams.get("id");
+const mainProduct = allProducts.find(
+  (product) => product.id === +mainProductId
+);
+
+const mainProductGenerator = () => {
+  productTitle.textContent = mainProduct.title;
+  productImage.setAttribute("src", mainProduct.img);
+  productPriceReal.textContent = mainProduct.price + 15_000;
+  productPriceDiscount.textContent = mainProduct.price;
+};
+mainProductGenerator();
 
 const zoomImage = (event) => {
   let xPosition = event.clientX - event.target.offsetLeft;
   let yPosition = event.clientY - event.target.offsetTop;
 
-  productDetailsImg.style.transformOrigin = `${xPosition}px ${yPosition}px`;
-  productDetailsImg.style.transform = "scale(1.5)";
+  productImage.style.transformOrigin = `${xPosition}px ${yPosition}px`;
+  productImage.style.transform = "scale(1.4)";
 };
 
 const zoomedOutImage = () => {
-  productDetailsImg.style.transformOrigin = "center";
-  productDetailsImg.style.transform = "scale(1)";
+  productImage.style.transformOrigin = "center";
+  productImage.style.transform = "scale(1)";
 };
 
 // set events
-productDetailsImg.addEventListener("mousemove", zoomImage);
-productDetailsImg.addEventListener("mouseleave", zoomedOutImage);
+productImage.addEventListener("mousemove", zoomImage);
+productImage.addEventListener("mouseleave", zoomedOutImage);

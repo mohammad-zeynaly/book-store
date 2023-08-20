@@ -25,7 +25,7 @@ allProducts.splice(0, 8).map((product) => {
     "beforeend",
     `<div class="best-sellers-box">
               <a
-                href="./pages/productDetails.html"
+                href="./pages/productDetails.html?id=${product.id}"
                 class="best-sellers-box-img"
               >
                 <img
@@ -37,7 +37,7 @@ allProducts.splice(0, 8).map((product) => {
               <span class="best-sellers-box-content">
                 <span class="best-sellers-box-content__heading">
                   <a
-                    href="./pages/productDetails.html"
+                    href="./pages/productDetails.html?id=${product.id}"
                     class="best-sellers-box__title"
                   >
                     ${product.title} 

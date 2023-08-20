@@ -8,7 +8,7 @@ allProducts.map((product) => {
     "beforeend",
     `<div class="best-sellers-box">
                 <a
-                  href="./productDetails.html"
+                  href="./productDetails.html?id=${id}"
                   class="best-sellers-box-img"
                 >
                   <img
@@ -20,7 +20,7 @@ allProducts.map((product) => {
                 <span class="best-sellers-box-content">
                   <span class="best-sellers-box-content__heading">
                     <a
-                      href="./productDetails.html"
+                      href="./productDetails.html?id=${id}"
                       class="best-sellers-box__title"
                     >
                       ${title} 
@@ -46,7 +46,8 @@ allProducts.map((product) => {
                     افزودن به سبد
                   </button>
                 </span>
-              </div>`
+    </div>
+    `
   );
 });
 

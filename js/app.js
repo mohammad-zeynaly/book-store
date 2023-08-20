@@ -20,6 +20,7 @@ const mobileMenuShowHandler = () => {
   overlayContainer.classList.toggle("overlay");
 };
 
+// render product selected
 allProducts.splice(0, 8).map((product) => {
   bestSellersProducts.insertAdjacentHTML(
     "beforeend",

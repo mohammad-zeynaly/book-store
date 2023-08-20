@@ -23,6 +23,7 @@ const mainProductGenerator = () => {
 };
 mainProductGenerator();
 
+// zoom in image
 const zoomImage = (event) => {
   let xPosition = event.clientX - event.target.offsetLeft;
   let yPosition = event.clientY - event.target.offsetTop;
@@ -31,6 +32,8 @@ const zoomImage = (event) => {
   productImage.style.transform = "scale(1.4)";
 };
 
+
+// zoomOut in image
 const zoomedOutImage = () => {
   productImage.style.transformOrigin = "center";
   productImage.style.transform = "scale(1)";

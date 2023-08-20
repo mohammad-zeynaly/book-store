@@ -2,6 +2,7 @@
 import { allProducts } from "../data/allData.js";
 const allProductsContainer = document.querySelector("#allProducts");
 
+// render all products
 allProducts.map((product) => {
   let { id, img, title, price } = product;
   allProductsContainer.insertAdjacentHTML(

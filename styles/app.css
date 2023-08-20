@@ -1033,13 +1033,11 @@ body {
   height: 1.3rem;
   stroke: var(--primary-color);
 }
-
 /* 
   =============================
     style page weblog details  
   =============================
 */
-
 .weblog-details {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1052,8 +1050,6 @@ body {
 }
 .weblog-details__description {
   width: 70%;
-}
-.weblog-details__article {
 }
 .weblog-details__title {
   font-size: 1.8rem;
@@ -1124,7 +1120,6 @@ body {
   margin-top: 2rem;
   border-radius: 3rem;
 }
-
 .weblog-details-ads__img {
   margin-top: 2rem;
   border-radius: 3rem;
@@ -1150,7 +1145,6 @@ body {
   padding: 0.75rem;
   margin-top: 1rem;
 }
-
 .weblog-details-comments__icon {
   width: 1.8rem;
   height: 1.8rem;
@@ -1193,8 +1187,6 @@ body {
   margin: 1rem 0;
   line-height: 2.1;
 }
-.weblog-details-form {
-}
 .weblog-details-form__title {
   font-size: 1.9rem;
   font-family: iran-sans-medium;
@@ -1226,7 +1218,6 @@ body {
   outline: none;
   font-family: iran-sans-regular;
 }
-
 .weblog-details-form__label {
   display: block;
   margin-bottom: 1rem;
@@ -1282,10 +1273,6 @@ body {
   font-family: iran-sans-medium;
   margin: 1rem 0;
 }
-.product-details-content__price-real {
-}
-.product-details-content__price-discount {
-}
 .product-details-content__caption {
   margin-top: 1rem;
 }
@@ -1295,4 +1282,93 @@ body {
   padding: 0.75rem 2rem;
   border-radius: 2rem;
   margin-top: 3rem;
+}
+/* 
+  =======================
+    style page about-us  
+  =======================
+*/
+.about-us {
+  padding-top: 6rem;
+}
+.about-us__title {
+  font-size: 2.5rem;
+  font-family: iran-sans-medium;
+}
+.about-us__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+}
+.about-us-img {
+  width: 49%;
+  background-color: var(--secondary-color);
+}
+.about-us__img {
+  border-radius: 3rem;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  object-fit: cover;
+}
+.about-us-content {
+  width: 49%;
+  margin-right: 3rem;
+}
+.about-us__title,
+.about-us-content__title {
+  font-size: 2.5rem;
+  font-family: iran-sans-medium;
+}
+.about-us-content__caption {
+  margin-top: 3rem;
+  line-height: 2.1;
+  color: #666666;
+}
+.about-us-widget-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.about-us-widget-item {
+  display: flex;
+  align-items: center;
+}
+.about-us-widget-icon {
+  background-color: var(--primary-color);
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.about-us-widget-item__icon {
+  fill: var(--white-color);
+  width: 3rem;
+  height: 3rem;
+}
+.about-us-widget-item__title {
+  margin-right: 1rem;
+}
+.about-us-ads {
+  background-color: #363636;
+  color: var(--white-color);
+  padding: 4rem 0;
+  margin: 6rem 0;
+}
+.about-us-ads__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us-ads__title {
+  font-size: 2.5rem;
+  font-family: iran-sans-medium;
+}
+.about-us-ads__caption {
+  padding-top: 2rem;
 }

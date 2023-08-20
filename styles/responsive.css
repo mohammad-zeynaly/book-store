@@ -46,6 +46,10 @@
   .weblog-items {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* ======================== responsive page about us  ========================*/
+  .about-us__wrapper {
+    align-items: flex-start;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -149,6 +153,19 @@
   .product-details-content {
     margin-bottom: 4rem;
     text-align: center;
+  }
+
+  /* ======================== responsive page about us  ========================*/
+  .about-us__wrapper {
+    flex-direction: column;
+  }
+  .about-us-img {
+    width: 100%;
+  }
+  .about-us-content {
+    width: 100%;
+    margin-top: 3rem;
+    margin-right: 0;
   }
 }
 
@@ -267,6 +284,18 @@
   .weblog-details-comments-item-heading__date {
     font-size: 1.25rem;
     margin-right: auto;
+  }
+
+  /* ======================== responsive page about us  ========================*/
+  .about-us-widget-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-us-content,
+  .about-us-ads__details {
+    text-align: center;
+  }
+  .about-us-ads__title {
+    font-size: 2.2rem;
   }
 }
 

@@ -425,6 +425,7 @@ body {
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .mobile-menu__copy-right {

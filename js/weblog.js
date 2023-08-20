@@ -1,5 +1,5 @@
 "use strict";
-import { allWeblogs } from "./allData.js";
+import { allWeblogs } from "../data/allData.js";
 const allWeblogsContainer = document.getElementById("allWeblogs");
 
 const allWeblogsGenerator = () => {

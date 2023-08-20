@@ -1,5 +1,5 @@
 "use strict";
-import { allWeblogs } from "./allData.js";
+import { allWeblogs } from "../data/allData.js";
 
 // select element in dom
 const blogTitle = document.querySelector("#blogTitle");

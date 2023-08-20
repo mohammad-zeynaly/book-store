@@ -1,6 +1,6 @@
 "use strict";
 // import all products
-import { allProducts } from "./allData.js";
+import { allProducts } from "../data/allData.js";
 
 // select element in dom
 const overlayContainer = document.querySelector("#overlay");
@@ -20,7 +20,7 @@ const mobileMenuShowHandler = () => {
   overlayContainer.classList.toggle("overlay");
 };
 
-allProducts.map((product) => {
+allProducts.splice(0, 8).map((product) => {
   bestSellersProducts.insertAdjacentHTML(
     "beforeend",
     `<div class="best-sellers-box">

@@ -55,6 +55,34 @@ export const allProducts = [
     price: 77_000,
     count: 1,
   },
+  {
+    id: 9,
+    img: "../assets/images/products/product-9.jpg",
+    title: "اقیانوسی در ذهن",
+    price: 99_000,
+    count: 1,
+  },
+  {
+    id: 10,
+    img: "../assets/images/products/product-10.jpg",
+    title: "پیش از آن‌که بمیرم",
+    price: 85_000,
+    count: 1,
+  },
+  {
+    id: 11,
+    img: "../assets/images/products/product-11.jpg",
+    title: " بیتکوین و رمز ارز ها",
+    price: 165_000,
+    count: 1,
+  },
+  {
+    id: 12,
+    img: "../assets/images/products/product-12.jpg",
+    title: "رودخانه اکسترا",
+    price: 49_000,
+    count: 1,
+  },
 ];
 
 export const allWeblogs = [

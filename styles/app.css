@@ -1292,7 +1292,8 @@ body {
 .about-us {
   padding-top: 6rem;
 }
-.about-us__title {
+.about-us__title,
+.contact-us__title {
   font-size: 2.5rem;
   font-family: iran-sans-medium;
 }
@@ -1372,4 +1373,62 @@ body {
 }
 .about-us-ads__caption {
   padding-top: 2rem;
+}
+/* 
+  =======================
+    style page about-us  
+  =======================
+*/
+.contact-us {
+  padding: 6rem 0;
+}
+.contact-us__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 4rem;
+}
+.contact-us-item {
+  display: flex;
+  align-items: center;
+  flex-basis: 25%;
+}
+.contact-us-item-icon {
+  background-color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: all 150ms ease-in;
+}
+.contact-us-item-icon:hover {
+  background-color: rgba(117, 139, 253, 0.1);
+}
+.contact-us-item__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  stroke: var(--white-color);
+}
+.contact-us-item-icon:hover .contact-us-item__icon {
+  stroke: var(--primary-color);
+}
+.contact-us-item-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+.contact-us-item-content__link {
+  font-size: 2rem;
+  transition: all 150ms ease-in;
+  cursor: pointer;
+}
+.contact-us-item-content__link:hover {
+  color: var(--primary-color);
+}
+.contact-us-item-content__text {
+  color: #666666;
+  font-size: 1.5rem;
 }

@@ -50,6 +50,11 @@
   .about-us__wrapper {
     align-items: flex-start;
   }
+
+  /* ======================== responsive page contact us  ========================*/
+  .contact-us-item {
+    flex-basis: 31%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -167,6 +172,14 @@
     margin-top: 3rem;
     margin-right: 0;
   }
+  /* ======================== responsive page contact us  ========================*/
+  .contact-us__items {
+    flex-wrap: wrap;
+  }
+  .contact-us-item {
+    flex-basis: 50%;
+    margin-bottom: 3rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -228,6 +241,10 @@
   /* ======================== responsive page weblog details  ========================*/
   .weblog-details-ads__img {
     height: 30rem;
+  }
+  /* ======================== responsive page contact us  ========================*/
+  .contact-us-item {
+    flex-basis: 100%;
   }
 }
 
@@ -296,6 +313,22 @@
   }
   .about-us-ads__title {
     font-size: 2.2rem;
+  }
+  .about-us__title,
+  .contact-us__title {
+    text-align: center;
+  }
+  /* ======================== responsive page contact us  ========================*/
+  .contact-us__items {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-us-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-us-item-content__link {
+    padding-top: 1rem;
   }
 }
 

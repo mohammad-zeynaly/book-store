@@ -143,6 +143,13 @@
   .product-details-content {
     width: 100%;
   }
+  .product-details-img {
+    margin-bottom: 1rem;
+  }
+  .product-details-content {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -1263,6 +1263,7 @@ body {
   margin-bottom: 6rem;
   border-radius: 1rem;
   width: 50%;
+  overflow: hidden;
 }
 .product-details__img {
   width: 100%;

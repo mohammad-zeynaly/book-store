@@ -4,6 +4,10 @@ import { saveInProductInLocalStorage } from "./productGenerator.js";
 let allShoppingCartProducts = JSON.parse(
   localStorage.getItem("products" || "[]")
 );
+
+const shoppingCartTotalPrice = document.querySelector(
+  ".shopping-cart-total-price__price"
+);
 // select element to dom
 const cartProducts = document.querySelector("#cartProducts");
 
@@ -64,17 +68,27 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
   });
 };
 renderCartProductsToDom(allShoppingCartProducts);
-
+totalPrice(allShoppingCartProducts);
 // remove from from shopping cart
 const removeProductFromCart = (productId) => {
   allShoppingCartProducts = allShoppingCartProducts.filter(
     (product) => product.id !== +productId
   );
-  console.log(allShoppingCartProducts);
   saveInProductInLocalStorage(allShoppingCartProducts);
   renderCartProductsToDom(allShoppingCartProducts);
   shoppingCartProductCountUpdate(allShoppingCartProducts.length);
+  totalPrice(allShoppingCartProducts);
 };
+
+// calculate all product total price
+function totalPrice(productsArray) {
+  let totalPriceValue = 0;
+  productsArray.forEach(
+    (product) => (totalPriceValue += product.count * product.price)
+  );
+
+  shoppingCartTotalPrice.textContent = totalPriceValue + " هزار تومان ";
+}
 
 //
 window.removeProductFromCart = removeProductFromCart;

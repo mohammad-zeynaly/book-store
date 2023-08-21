@@ -60,7 +60,7 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
                     </span>
                   </td>
                   <td class="shopping-cart-table-body__column">
-                    ${price} تومان
+                    ${price * count} تومان
                   </td>
                 </tr>`
     );

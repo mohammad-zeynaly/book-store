@@ -23,6 +23,11 @@ const mobileMenuShowHandler = () => {
   overlayContainer.classList.toggle("overlay");
 };
 
+// save product in localStorage
+export const saveInProductInLocalStorage = (productsArray) => {
+  localStorage.setItem("products", JSON.stringify(productsArray));
+};
+
 // update shopping-cart products count
 export const shoppingCartProductCountUpdate = (productCount) => {
   desktopBasketCount.textContent = 0;
@@ -32,6 +37,19 @@ export const shoppingCartProductCountUpdate = (productCount) => {
     mobileBasketCount.textContent = productCount;
   }
 };
+
+// sweetAlert in toast config
+export const toastTemplate = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  timer: 5000,
+  timerProgressBar: true,
+  showConfirmButton: false,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer),
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
 
 if (cartProductsCounts) {
   shoppingCartProductCountUpdate(cartProductsCounts);

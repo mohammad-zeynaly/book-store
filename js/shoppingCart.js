@@ -1,5 +1,8 @@
-import { shoppingCartProductCountUpdate } from "./general.js";
-import { saveInProductInLocalStorage } from "./productGenerator.js";
+import {
+  shoppingCartProductCountUpdate,
+  toastTemplate,
+  saveInProductInLocalStorage,
+} from "./general.js";
 
 let allShoppingCartProducts = JSON.parse(
   localStorage.getItem("products" || "[]")
@@ -78,6 +81,10 @@ const removeProductFromCart = (productId) => {
   renderCartProductsToDom(allShoppingCartProducts);
   shoppingCartProductCountUpdate(allShoppingCartProducts.length);
   totalPrice(allShoppingCartProducts);
+  toastTemplate.fire({
+    icon: "error",
+    title: "محصول با موفقیت از سبد خرید حذف شد ",
+  });
 };
 
 // calculate all product total price

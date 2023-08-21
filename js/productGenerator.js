@@ -1,10 +1,9 @@
 import { allProducts } from "../data/allData.js";
-import { shoppingCartProductCountUpdate } from "./general.js";
-//select element to dom
-const desktopBasketCount = document.querySelector(
-  ".nav-wrapper-left__basket-count"
-);
-const mobileBasketCount = document.querySelector(".mobile-basket___count");
+import {
+  shoppingCartProductCountUpdate,
+  toastTemplate,
+  saveInProductInLocalStorage,
+} from "./general.js";
 
 const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
 
@@ -111,11 +110,6 @@ const productGenerator = (productsContainer, whatIsRender) => {
   }
 };
 
-// save product in localStorage
-export const saveInProductInLocalStorage = (productsArray) => {
-  localStorage.setItem("products", JSON.stringify(productsArray));
-};
-
 // add product to cart
 const addProductToCart = (productId) => {
   const mainProduct = allProducts.find((product) => product.id === +productId);
@@ -128,6 +122,10 @@ const addProductToCart = (productId) => {
     shoppingCart.push(mainProduct);
     saveInProductInLocalStorage(shoppingCart);
     shoppingCartProductCountUpdate(shoppingCart.length);
+    toastTemplate.fire({
+      icon: "success",
+      title: "محصول با موفقیت اضافه شد",
+    });
   }
   console.log(shoppingCart);
 };

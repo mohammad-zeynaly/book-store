@@ -42,7 +42,7 @@ export const shoppingCartProductCountUpdate = (productCount) => {
 export const toastTemplate = Swal.mixin({
   toast: true,
   position: "top-end",
-  timer: 5000,
+  timer: 4000,
   timerProgressBar: true,
   showConfirmButton: false,
   didOpen: (toast) => {

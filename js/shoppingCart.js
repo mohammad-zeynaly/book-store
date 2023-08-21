@@ -13,6 +13,8 @@ const shoppingCartTotalPrice = document.querySelector(
 );
 // select element to dom
 const cartProducts = document.querySelector("#cartProducts");
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
+const emptyShoppingCart = document.querySelector("#emptyShoppingCart  ");
 let productCount = 1;
 
 const renderCartProductsToDom = (shoppingCartProducts) => {
@@ -69,9 +71,19 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
     );
   });
 };
-renderCartProductsToDom(allShoppingCartProducts);
-totalPrice(allShoppingCartProducts);
 
+const checkInShoppingCart = () => {
+  if (allShoppingCartProducts?.length > 0) {
+    renderCartProductsToDom(allShoppingCartProducts);
+    totalPrice(allShoppingCartProducts);
+    shoppingCartContainer.classList.remove("hidden");
+    emptyShoppingCart.classList.add("hidden");
+  } else {
+    shoppingCartContainer.classList.add("hidden");
+    emptyShoppingCart.classList.remove("hidden");
+  }
+};
+checkInShoppingCart();
 // remove from from shopping cart
 const removeProductFromCart = (productId) => {
   allShoppingCartProducts = allShoppingCartProducts.filter(
@@ -85,6 +97,7 @@ const removeProductFromCart = (productId) => {
     icon: "error",
     title: "محصول با موفقیت از سبد خرید حذف شد ",
   });
+  checkInShoppingCart();
 };
 
 // calculate all product total price

@@ -257,7 +257,7 @@
       <section class="shopping-cart">
         <div class="container">
           <h2 class="shopping-cart__title">سبد خرید</h2>
-          <div class="shopping-cart__table">
+          <div class="shopping-cart__table" id="shoppingCartContainer">
             <table class="shopping-cart-table">
               <thead class="shopping-cart-table-heading">
                 <tr class="shopping-cart-table-heading__row">
@@ -286,7 +286,10 @@
             </span>
           </div>
         </div>
-        <section class="shopping-cart__empty shopping-cart-empty hidden">
+        <section
+          class="shopping-cart__empty shopping-cart-empty"
+          id="emptyShoppingCart"
+        >
           <div class="container">
             <p class="shopping-cart-empty__caption">
               سبد خرید شما در حال حاضر خالی است.

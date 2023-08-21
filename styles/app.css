@@ -324,6 +324,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.nav-wrapper-left__basket-count {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
 }
 .nav-wrapper-left__login-btn {
   background-color: var(--primary-color);

@@ -212,7 +212,7 @@
             <div class="container">
               <div class="nav__wrapper-left">
                 <a
-                  href="./pages/shopping-cart-page.html"
+                  href="./shopping-cart-page.html"
                   class="nav-wrapper-left__basket-btn"
                 >
                   <svg
@@ -269,52 +269,8 @@
                   <th class="shopping-cart-table-heading__column">جمع جزء</th>
                 </tr>
               </thead>
-              <tbody class="shopping-cart-table-body">
-                <tr class="shopping-cart-table-body__heading">
-                  <td class="shopping-cart-table-body__column">
-                    <span class="shopping-cart-table-body__close"> x </span>
-                  </td>
-                  <td class="shopping-cart-table-body__column">
-                    <a href="./productDetails.html?id=1">
-                      <img
-                        class="shopping-cart-table-body__img"
-                        src="../assets/images/products/product-1.jpg"
-                        alt="عکس محصول"
-                      />
-                    </a>
-                  </td>
-                  <td class="shopping-cart-table-body__column">
-                    <a
-                      href="./productDetails.html?id=1"
-                      class="shopping-cart-table-body__link"
-                    >
-                      دنباله کتابها
-                    </a>
-                  </td>
-                  <td class="shopping-cart-table-body__column">79,000 تومان</td>
-                  <td class="shopping-cart-table-body__column">
-                    <span>
-                      <span class="shopping-cart-table-body__increment">
-                        +
-                      </span>
-                      <input
-                        type="number"
-                        name="shoppingCartCount"
-                        id=""
-                        min="0"
-                        max="10"
-                        value="1"
-                        class="shopping-cart-table-body__input"
-                      />
-                      <span class="shopping-cart-table-body__decrement">
-                        -
-                      </span>
-                    </span>
-                  </td>
-                  <td class="shopping-cart-table-body__column">
-                    158,000 تومان
-                  </td>
-                </tr>
+              <tbody class="shopping-cart-table-body" id="cartProducts">
+                
               </tbody>
             </table>
             <span class="shopping-cart-table__footer">
@@ -418,5 +374,6 @@
     </footer>
 
     <script src="../js/general.js"></script>
+    <script src="../js/shoppingCart.js"></script>
   </body>
 </html>

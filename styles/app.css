@@ -365,6 +365,21 @@ body {
   align-items: center;
   background-color: var(--primary-color);
   border-radius: 100%;
+  position: relative;
+}
+.mobile-basket___count {
+  color: var(--white-color);
+  background-color: #f3a207;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3px;
+  right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mobile-nav__btn {
   margin-left: 1rem;
@@ -1573,15 +1588,20 @@ body {
 .shopping-cart-table-body__decrement:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
-
   border-radius: 100%;
 }
 .shopping-cart-table-body__close {
   color: red;
-  padding: 1rem;
+  padding: 0 1rem;
   cursor: pointer;
   font-family: iran-sans-bold;
   font-size: 2rem;
+  transition: all 150ms ease-in;
+}
+.shopping-cart-table-body__close:hover {
+  background-color: red;
+  color: var(--white-color);
+  border-radius: 100%;
 }
 .shopping-cart-table-body__link {
   transition: all 150ms ease-in;

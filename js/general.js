@@ -1,15 +1,16 @@
 "use strict";
-
 // select element in dom
 const overlayContainer = document.querySelector("#overlay");
 const mobileMenuContainer = document.querySelector(".mobile-menu");
 const mobileMenuBtn = document.querySelector("#mobile-nav__btn");
 const mobileMenuCloseBtn = document.querySelector(".mobile-menu__close-btn");
-const BasketCount = document.querySelector(".nav-wrapper-left__basket-count");
+const desktopBasketCount = document.querySelector(
+  ".nav-wrapper-left__basket-count"
+);
+const mobileBasketCount = document.querySelector(".mobile-basket___count");
 
+// all shopping cart products count
 const cartProductsCounts = JSON.parse(localStorage.getItem("products"))?.length;
-
-cartProductsCounts ? (BasketCount.textContent = cartProductsCounts) : 0;
 
 const overlayShowHandler = () => {
   overlayContainer.classList.remove("overlay");
@@ -21,6 +22,20 @@ const mobileMenuShowHandler = () => {
   mobileMenuContainer.classList.toggle("mobile-menu--open");
   overlayContainer.classList.toggle("overlay");
 };
+
+// update shopping-cart products count
+export const shoppingCartProductCountUpdate = (productCount) => {
+  desktopBasketCount.textContent = 0;
+  mobileBasketCount.textContent = 0;
+  if (productCount) {
+    desktopBasketCount.textContent = productCount;
+    mobileBasketCount.textContent = productCount;
+  }
+};
+
+if (cartProductsCounts) {
+  shoppingCartProductCountUpdate(cartProductsCounts);
+}
 
 // set events
 overlayContainer.addEventListener("click", overlayShowHandler);

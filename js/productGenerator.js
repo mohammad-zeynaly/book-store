@@ -1,10 +1,12 @@
 import { allProducts } from "../data/allData.js";
-
+import { shoppingCartProductCountUpdate } from "./general.js";
 //select element to dom
-const BasketCount = document.querySelector(".nav-wrapper-left__basket-count");
+const desktopBasketCount = document.querySelector(
+  ".nav-wrapper-left__basket-count"
+);
+const mobileBasketCount = document.querySelector(".mobile-basket___count");
 
 const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
-BasketCount.textContent = shoppingCart.length || 0;
 
 const productGenerator = (productsContainer, whatIsRender) => {
   if (whatIsRender === "index") {
@@ -110,7 +112,7 @@ const productGenerator = (productsContainer, whatIsRender) => {
 };
 
 // save product in localStorage
-const saveInProductInLocalStorage = (productsArray) => {
+export const saveInProductInLocalStorage = (productsArray) => {
   localStorage.setItem("products", JSON.stringify(productsArray));
 };
 
@@ -125,7 +127,7 @@ const addProductToCart = (productId) => {
   if (!productIsInCart) {
     shoppingCart.push(mainProduct);
     saveInProductInLocalStorage(shoppingCart);
-    BasketCount.textContent = shoppingCart.length;
+    shoppingCartProductCountUpdate(shoppingCart.length);
   }
   console.log(shoppingCart);
 };

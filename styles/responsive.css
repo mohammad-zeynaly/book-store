@@ -180,6 +180,12 @@
     flex-basis: 50%;
     margin-bottom: 3rem;
   }
+  .contact-us-testimonials__boxes {
+    flex-wrap: wrap;
+  }
+  .contact-us-testimonials-box {
+    width: 48%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -245,6 +251,9 @@
   /* ======================== responsive page contact us  ========================*/
   .contact-us-item {
     flex-basis: 100%;
+  }
+  .contact-us-testimonials-box {
+    width: 100%;
   }
 }
 

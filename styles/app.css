@@ -1375,12 +1375,12 @@ body {
   padding-top: 2rem;
 }
 /* 
-  =======================
-    style page about-us  
-  =======================
+  =========================
+    style page contact-us
+  =========================
 */
 .contact-us {
-  padding: 6rem 0;
+  padding-top: 6rem;
 }
 .contact-us__items {
   display: flex;
@@ -1431,4 +1431,56 @@ body {
 .contact-us-item-content__text {
   color: #666666;
   font-size: 1.5rem;
+}
+
+.contact-us-testimonials {
+  padding: 6rem 0;
+}
+.contact-us-testimonials__boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+.contact-us-testimonials-box {
+  width: 33%;
+}
+.contact-us-testimonials-box__content {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  position: relative;
+  border-bottom-right-radius: 0;
+}
+.contact-us-testimonials-box__icon {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  bottom: -2.5rem;
+  right: -0.4rem;
+}
+.contact-us-testimonials-box__user {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.contact-us-testimonials-box__avatar {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.contact-us-testimonials-box__details {
+  margin-right: 2rem;
+}
+.contact-us-testimonials-box__name {
+  font-family: iran-sans-bold;
+  font-size: 1.5rem;
+}
+.contact-us-testimonials-box__role {
+  color: #666666;
+  font-family: iran-sans-medium;
 }

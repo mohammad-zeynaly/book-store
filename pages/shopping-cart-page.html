@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/app.css" />
     <!-- all responsive project -->
     <link rel="stylesheet" href="../styles/responsive.css" />
-    <title>وبلاگ</title>
+    <title>سبد خرید</title>
   </head>
   <body>
     <!-- overlay container-->
@@ -44,15 +44,15 @@
                     </a>
                   </li>
                   <li class="nav-menu-desktop__item">
-                    <a
-                      href="./weblog.html"
-                      class="nav-menu-desktop__link nav-menu-desktop__link--active"
-                    >
+                    <a href="./weblog.html" class="nav-menu-desktop__link">
                       وبلاگ
                     </a>
                   </li>
                   <li class="nav-menu-desktop__item">
-                    <a href="./contact-us.html" class="nav-menu-desktop__link">
+                    <a
+                      href="./contact-us.html"
+                      class="nav-menu-desktop__link nav-menu-desktop__link--active"
+                    >
                       تماس با ما</a
                     >
                   </li>
@@ -109,16 +109,16 @@
                       </a>
                     </li>
                     <li class="nav-menu-mobile__item">
-                      <a
-                        href="./weblog.html"
-                        class="nav-menu-mobile__link nav-menu-mobile__link--active"
-                      >
+                      <a href="./weblog.html" class="nav-menu-mobile__link">
                         وبلاگ
                       </a>
                     </li>
 
                     <li class="nav-menu-mobile__item">
-                      <a href="./contact-us.html" class="nav-menu-mobile__link">
+                      <a
+                        href="./contact-us.html"
+                        class="nav-menu-mobile__link nav-menu-mobile__link--active"
+                      >
                         تماس با ما</a
                       >
                     </li>
@@ -250,13 +250,94 @@
     </header>
     <!-- main content site-->
     <main class="main">
-      <section class="weblog">
+      <section class="shopping-cart">
         <div class="container">
-          <h2 class="weblog__title">وبلاگ</h2>
-          <div class="weblog-items" id="allWeblogs">
-            <!-- render weblog post in weblog.js file -->
+          <h2 class="shopping-cart__title">سبد خرید</h2>
+          <div class="shopping-cart__table">
+            <table class="shopping-cart-table">
+              <thead class="shopping-cart-table-heading">
+                <tr class="shopping-cart-table-heading__row">
+                  <th class="shopping-cart-table-heading__column"></th>
+                  <th class="shopping-cart-table-heading__column"></th>
+                  <th class="shopping-cart-table-heading__column">محصول</th>
+                  <th class="shopping-cart-table-heading__column">قیمت</th>
+                  <th class="shopping-cart-table-heading__column">تعداد</th>
+                  <th class="shopping-cart-table-heading__column">جمع جزء</th>
+                </tr>
+              </thead>
+              <tbody class="shopping-cart-table-body">
+                <tr class="shopping-cart-table-body__heading">
+                  <td class="shopping-cart-table-body__column">
+                    <span class="shopping-cart-table-body__close"> x </span>
+                  </td>
+                  <td class="shopping-cart-table-body__column">
+                    <a href="./productDetails.html?id=1">
+                      <img
+                        class="shopping-cart-table-body__img"
+                        src="../assets/images/products/product-1.jpg"
+                        alt="عکس محصول"
+                      />
+                    </a>
+                  </td>
+                  <td class="shopping-cart-table-body__column">
+                    <a
+                      href="./productDetails.html?id=1"
+                      class="shopping-cart-table-body__link"
+                    >
+                      دنباله کتابها
+                    </a>
+                  </td>
+                  <td class="shopping-cart-table-body__column">79,000 تومان</td>
+                  <td class="shopping-cart-table-body__column">
+                    <span>
+                      <span class="shopping-cart-table-body__increment">
+                        +
+                      </span>
+                      <input
+                        type="number"
+                        name="shoppingCartCount"
+                        id=""
+                        min="0"
+                        max="10"
+                        value="1"
+                        class="shopping-cart-table-body__input"
+                      />
+                      <span class="shopping-cart-table-body__decrement">
+                        -
+                      </span>
+                    </span>
+                  </td>
+                  <td class="shopping-cart-table-body__column">
+                    158,000 تومان
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="shopping-cart-table__footer">
+              <div class="shopping-cart-total-price">
+                <h6 class="shopping-cart-total-price__title">
+                  جمع کل سبد خرید
+                </h6>
+                <span class="shopping-cart-total-price__price"
+                  >248,000 هزار تومان</span
+                >
+              </div>
+              <a href="./booksStore.html" class="shopping-cart__btn">
+                ادامه خرید</a
+              >
+            </span>
           </div>
         </div>
+        <section class="shopping-cart__empty shopping-cart-empty hidden">
+          <div class="container">
+            <p class="shopping-cart-empty__caption">
+              سبد خرید شما در حال حاضر خالی است.
+            </p>
+            <a href="./booksStore.html" class="shopping-cart-empty__btn">
+              بازگشت به فروشگاه
+            </a>
+          </div>
+        </section>
       </section>
     </main>
     <!-- footer content site-->
@@ -277,10 +358,12 @@
           <ul class="footer-item footer-menu">
             <h6 class="footer-menu__title">منو سفارشی</h6>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link"> صفحه اصلی </a>
+              <a href="../index.html" class="footer-menu__link"> صفحه اصلی </a>
             </li>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link"> کتاب ها </a>
+              <a href="./booksStore.html" class="footer-menu__link">
+                کتاب ها
+              </a>
             </li>
             <li class="footer-menu__item">
               <a href="#" class="footer-menu__link"> مجموعه </a>
@@ -307,7 +390,9 @@
           <ul class="footer-item footer-menu">
             <h6 class="footer-menu__title">درباره ما</h6>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link"> درباره ما </a>
+              <a href="./about-us.html" class="footer-menu__link">
+                درباره ما
+              </a>
             </li>
             <li class="footer-menu__item">
               <a href="#" class="footer-menu__link"> شرکا </a>
@@ -316,7 +401,9 @@
               <a href="#" class="footer-menu__link"> چشم اندز</a>
             </li>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link"> تماس با ما </a>
+              <a href="./contact-us.html" class="footer-menu__link">
+                تماس با ما
+              </a>
             </li>
           </ul>
         </div>
@@ -325,7 +412,7 @@
         طراحی و توسعه توسط محمد زینالی - شهریور -1402
       </p>
     </footer>
+
     <script src="../js/general.js"></script>
-    <script src="../js/weblog.js" type="module"></script>
   </body>
 </html>

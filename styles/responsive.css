@@ -255,6 +255,26 @@
   .contact-us-testimonials-box {
     width: 100%;
   }
+
+  /* ======================== responsive page shopping-cart  ========================*/
+  .shopping-cart-table-heading {
+    display: none;
+  }
+  .shopping-cart-table-body__column {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+  }
+  .shopping-cart-table-body__close {
+    padding: 0;
+  }
+  .shopping-cart-table__footer {
+    flex-direction: column;
+  }
+  .shopping-cart-total-price,
+  .shopping-cart__btn {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 576px) {

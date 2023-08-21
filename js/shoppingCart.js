@@ -10,13 +10,12 @@ const shoppingCartTotalPrice = document.querySelector(
 );
 // select element to dom
 const cartProducts = document.querySelector("#cartProducts");
-
-console.log("cartProducts => ", cartProducts);
+let productCount = 1;
 
 const renderCartProductsToDom = (shoppingCartProducts) => {
   cartProducts.innerHTML = "";
   shoppingCartProducts?.forEach((product) => {
-    let { id, title, img, price } = product;
+    let { id, title, img, price, count } = product;
     cartProducts.insertAdjacentHTML(
       "beforeend",
       `<tr class="shopping-cart-table-body__heading">
@@ -43,7 +42,7 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
                   <td class="shopping-cart-table-body__column">${price} تومان</td>
                   <td class="shopping-cart-table-body__column">
                     <span>
-                      <span class="shopping-cart-table-body__increment">
+                      <span class="shopping-cart-table-body__increment" onclick="incrementProductCount('${id}')" >
                         +
                       </span>
                       <input
@@ -52,10 +51,10 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
                         id=""
                         min="0"
                         max="10"
-                        value="1"
+                        value="${count}"
                         class="shopping-cart-table-body__input"
                       />
-                      <span class="shopping-cart-table-body__decrement">
+                      <span class="shopping-cart-table-body__decrement" onclick="decrementProductCount('${id}')">
                         -
                       </span>
                     </span>
@@ -69,6 +68,7 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
 };
 renderCartProductsToDom(allShoppingCartProducts);
 totalPrice(allShoppingCartProducts);
+
 // remove from from shopping cart
 const removeProductFromCart = (productId) => {
   allShoppingCartProducts = allShoppingCartProducts.filter(
@@ -90,5 +90,41 @@ function totalPrice(productsArray) {
   shoppingCartTotalPrice.textContent = totalPriceValue + " هزار تومان ";
 }
 
+// increment product count
+const incrementProductCount = (productId) => {
+  const mainProduct = allShoppingCartProducts.find(
+    (product) => product.id === +productId
+  );
+  productCount = mainProduct.count;
+  if (productCount < 10) {
+    productCount++;
+  }
+
+  mainProduct.count = productCount;
+  saveInProductInLocalStorage(allShoppingCartProducts);
+  totalPrice(allShoppingCartProducts);
+  renderCartProductsToDom(allShoppingCartProducts);
+};
+
+//decrement product count
+const decrementProductCount = (productId) => {
+  const mainProduct = allShoppingCartProducts.find(
+    (product) => product.id === +productId
+  );
+
+  productCount = mainProduct.count;
+
+  if (productCount > 0) {
+    productCount--;
+  }
+
+  mainProduct.count = productCount;
+  saveInProductInLocalStorage(allShoppingCartProducts);
+  renderCartProductsToDom(allShoppingCartProducts);
+  totalPrice(allShoppingCartProducts);
+};
+
 //
 window.removeProductFromCart = removeProductFromCart;
+window.incrementProductCount = incrementProductCount;
+window.decrementProductCount = decrementProductCount;

@@ -1,4 +1,5 @@
 "use strict";
+import { allProducts } from "../data/allData.js";
 // import products generator
 import productGenerator from "./productGenerator.js";
 // select element in dom
@@ -20,7 +21,7 @@ const mobileMenuShowHandler = () => {
 };
 
 // render product selected
-productGenerator(bestSellersProducts, "index");
+productGenerator(allProducts, bestSellersProducts, "index");
 
 // set events
 overlayContainer.addEventListener("click", overlayShowHandler);

@@ -7,9 +7,10 @@ import {
 
 const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
 
-const productGenerator = (productsContainer, whatIsRender) => {
+const productGenerator = (productArray, productsContainer, whatIsRender) => {
   if (whatIsRender === "index") {
-    allProducts.slice(0, 8).map((product) => {
+    productsContainer.innerHTML = "";
+    productArray.slice(0, 8).map((product) => {
       let { id, title, img, price } = product;
       productsContainer.insertAdjacentHTML(
         "beforeend",
@@ -58,7 +59,9 @@ const productGenerator = (productsContainer, whatIsRender) => {
     });
   } else if (whatIsRender === "bookStore") {
     // render all products
-    allProducts.map((product) => {
+    productsContainer.innerHTML = "";
+
+    productArray.map((product) => {
       let { id, img, title, price } = product;
       productsContainer.insertAdjacentHTML(
         "beforeend",

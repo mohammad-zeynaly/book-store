@@ -4,6 +4,7 @@ export const allProducts = [
     img: "../assets/images/products/product-1.jpg",
     title: " مغازه‌ی خودکشی ",
     price: 45_000,
+    sortType: "popularity",
     count: 1,
   },
   {
@@ -11,6 +12,7 @@ export const allProducts = [
     img: "../assets/images/products/product-2.jpg",
     title: " حکایت دولت و فرزانگی ",
     price: 58_000,
+    sortType: "popularity",
     count: 1,
   },
   {
@@ -18,6 +20,7 @@ export const allProducts = [
     img: "../assets/images/products/product-3.jpg",
     title: " هنر شفاف اندیشیدن",
     price: 89_000,
+    sortType: "popularity",
     count: 1,
   },
   {
@@ -25,6 +28,7 @@ export const allProducts = [
     img: "../assets/images/products/product-4.jpg",
     title: "خانه درختی 104 طبقه",
     price: 105_000,
+    sortType: "popularity",
     count: 1,
   },
   {
@@ -32,13 +36,15 @@ export const allProducts = [
     img: "../assets/images/products/product-5.jpg",
     title: " شازده کوچولو ",
     price: 65_000,
+    sortType: "popularity",
     count: 1,
   },
   {
     id: 6,
     img: "../assets/images/products/product-6.jpg",
     title: "جزء از کل",
-    price: 58_000,
+    price: 53_000,
+    sortType: "popularity",
     count: 1,
   },
   {
@@ -46,6 +52,7 @@ export const allProducts = [
     img: "../assets/images/products/product-7.jpg",
     title: " من، پیش از تو ",
     price: 45_000,
+    sortType: "date",
     count: 1,
   },
   {
@@ -53,6 +60,7 @@ export const allProducts = [
     img: "../assets/images/products/product-8.jpg",
     title: "  آداب بی‌قراری ",
     price: 77_000,
+    sortType: "date",
     count: 1,
   },
   {
@@ -60,6 +68,7 @@ export const allProducts = [
     img: "../assets/images/products/product-9.jpg",
     title: "اقیانوسی در ذهن",
     price: 99_000,
+    sortType: "date",
     count: 1,
   },
   {
@@ -67,6 +76,7 @@ export const allProducts = [
     img: "../assets/images/products/product-10.jpg",
     title: "پیش از آن‌که بمیرم",
     price: 85_000,
+    sortType: "date",
     count: 1,
   },
   {
@@ -74,13 +84,15 @@ export const allProducts = [
     img: "../assets/images/products/product-11.jpg",
     title: " بیتکوین و رمز ارز ها",
     price: 165_000,
+    sortType: "date",
     count: 1,
   },
   {
     id: 12,
     img: "../assets/images/products/product-12.jpg",
     title: "رودخانه اکسترا",
-    price: 49_000,
+    price: 47_000,
+    sortType: "date",
     count: 1,
   },
 ];

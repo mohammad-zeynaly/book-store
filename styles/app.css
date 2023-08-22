@@ -254,7 +254,7 @@ body {
   margin-top: 1.2rem;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 /* ======================== Start Main  Style  ========================*/
 
@@ -971,7 +971,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin: 5rem;
+  margin: 5rem 0;
 }
 .best-sellers-pagination__btn {
   color: var(--primary-color);

@@ -17,7 +17,7 @@ const mainProduct = allProducts.find(
 
 const mainProductGenerator = () => {
   productTitle.textContent = mainProduct.title;
-  productImage.setAttribute("src", mainProduct.img);
+  productImage.setAttribute("src", `.${mainProduct.img}`);
   productPriceReal.textContent = mainProduct.price + 15_000;
   productPriceDiscount.textContent = mainProduct.price;
 };

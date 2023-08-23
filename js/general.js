@@ -1,4 +1,6 @@
 "use strict";
+import { allProducts } from "../data/allData.js";
+import { toastTemplate } from "./toastTemplate.js";
 // select element in dom
 const overlayContainer = document.querySelector("#overlay");
 const mobileMenuContainer = document.querySelector(".mobile-menu");
@@ -8,6 +10,7 @@ const desktopBasketCount = document.querySelector(
   ".nav-wrapper-left__basket-count"
 );
 const mobileBasketCount = document.querySelector(".mobile-basket___count");
+const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
 
 // all shopping cart products count
 const cartProductsCounts = JSON.parse(localStorage.getItem("products"))?.length;
@@ -38,6 +41,26 @@ export const shoppingCartProductCountUpdate = (productCount) => {
   }
 };
 
+// add product to cart
+export const addProductToCart = (productId) => {
+  const mainProduct = allProducts.find((product) => product.id === +productId);
+
+  const productIsInCart = shoppingCart?.some(
+    (product) => product.id === mainProduct.id
+  );
+
+  if (!productIsInCart) {
+    shoppingCart.push(mainProduct);
+    saveInProductInLocalStorage(shoppingCart);
+    shoppingCartProductCountUpdate(shoppingCart.length);
+    toastTemplate.fire({
+      icon: "success",
+      title: "محصول با موفقیت اضافه شد",
+    });
+  }
+  console.log(shoppingCart);
+};
+
 if (cartProductsCounts) {
   shoppingCartProductCountUpdate(cartProductsCounts);
 }
@@ -46,16 +69,4 @@ if (cartProductsCounts) {
 overlayContainer.addEventListener("click", overlayShowHandler);
 mobileMenuBtn.addEventListener("click", mobileMenuShowHandler);
 mobileMenuCloseBtn.addEventListener("click", overlayShowHandler);
-
-// sweetAlert in toast config
-export const toastTemplate = Swal.mixin({
-  toast: true,
-  position: "top-end",
-  timer: 4000,
-  timerProgressBar: true,
-  showConfirmButton: false,
-  didOpen: (toast) => {
-    toast.addEventListener("mouseenter", Swal.stopTimer),
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-  },
-});
+window.addProductToCart = addProductToCart;

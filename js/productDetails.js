@@ -1,5 +1,7 @@
 "use strict";
+
 import { allProducts } from "../data/allData.js";
+import { addProductToCart } from "./general.js";
 // select element in dom
 const productTitle = document.querySelector(".product-details-content__title");
 const productImage = document.querySelector(".product-details__img");
@@ -14,6 +16,7 @@ const mainProductId = urlParams.get("id");
 const mainProduct = allProducts.find(
   (product) => product.id === +mainProductId
 );
+const addToCartBtn = document.querySelector(".product-details-content__btn");
 
 const mainProductGenerator = () => {
   productTitle.textContent = mainProduct.title;
@@ -32,7 +35,6 @@ const zoomImage = (event) => {
   productImage.style.transform = "scale(1.4)";
 };
 
-
 // zoomOut in image
 const zoomedOutImage = () => {
   productImage.style.transformOrigin = "center";
@@ -42,3 +44,4 @@ const zoomedOutImage = () => {
 // set events
 productImage.addEventListener("mousemove", zoomImage);
 productImage.addEventListener("mouseleave", zoomedOutImage);
+addToCartBtn.addEventListener("click", () => addProductToCart(mainProductId));

@@ -17,7 +17,7 @@ const mainProduct = allProducts.find(
 
 const mainProductGenerator = () => {
   productTitle.textContent = mainProduct.title;
-  productImage.setAttribute("src", mainProduct.img);
+  productImage.setAttribute("src", `.${mainProduct.img}`);
   productPriceReal.textContent = mainProduct.price + 15_000;
   productPriceDiscount.textContent = mainProduct.price;
 };
@@ -31,7 +31,6 @@ const zoomImage = (event) => {
   productImage.style.transformOrigin = `${xPosition}px ${yPosition}px`;
   productImage.style.transform = "scale(1.4)";
 };
-
 
 // zoomOut in image
 const zoomedOutImage = () => {

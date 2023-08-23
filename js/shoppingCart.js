@@ -31,7 +31,7 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
                     <a href="./productDetails.html?id=${id}">
                       <img
                         class="shopping-cart-table-body__img"
-                        src="${img}"
+                        src=".${img}"
                         alt="عکس محصول"
                       />
                     </a>

@@ -1228,6 +1228,13 @@ body {
   margin: 1rem 0;
   line-height: 2.1;
 }
+.weblog-details-comments-item__status {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 1rem;
+  font-size: 1.3rem;
+}
 .weblog-details-form__title {
   font-size: 1.9rem;
   font-family: iran-sans-medium;

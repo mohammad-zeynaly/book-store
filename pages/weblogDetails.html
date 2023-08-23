@@ -304,10 +304,7 @@
               </article>
 
               <div class="weblog-details-comments">
-                <span
-                  class="weblog-details-comments__count"
-                  id="comments__count"
-                >
+                <span class="weblog-details-comments__count">
                   <svg
                     fill="none"
                     viewBox="0 0 24 24"
@@ -322,7 +319,7 @@
                     />
                   </svg>
 
-                  3 نظر
+                  <span id="comments__count"> 3 نظر</span>
                 </span>
 
                 <div
@@ -408,7 +405,7 @@
                     </p>
                   </div>
                 </div>
-                <form action="#" class="weblog-details-form">
+                <form action="#" class="weblog-details-form" id="commentsForm">
                   <h4 class="weblog-details-form__title">
                     دیدگاهتان را بنویسید
                   </h4>
@@ -429,25 +426,25 @@
                   </div>
                   <div class="weblog-details-form-inputs">
                     <div class="weblog-details-form-input">
-                      <label for="comment" class="weblog-details-form__label"
+                      <label for="username" class="weblog-details-form__label"
                         >نام *
                       </label>
                       <input
                         type="text"
                         class="weblog-details-form__input"
                         name="name"
-                        id="name"
+                        id="username"
                       />
                     </div>
                     <div class="weblog-details-form-input">
-                      <label for="comment" class="weblog-details-form__label"
+                      <label for="userEmail" class="weblog-details-form__label"
                         >ایمیل *
                       </label>
                       <input
                         type="email"
                         class="weblog-details-form__input"
                         name="email"
-                        id="email"
+                        id="userEmail"
                       />
                     </div>
                   </div>

@@ -20,6 +20,7 @@ const allProductsSortHandler = (event) => {
   switch (sortValue) {
     case "all": {
       products = allProducts;
+      currentPage = 1;
       productGenerator(
         products.slice(0, pageSize),
         allProductsContainer,

@@ -38,6 +38,15 @@ export const shoppingCartProductCountUpdate = (productCount) => {
   }
 };
 
+if (cartProductsCounts) {
+  shoppingCartProductCountUpdate(cartProductsCounts);
+}
+
+// set events
+overlayContainer.addEventListener("click", overlayShowHandler);
+mobileMenuBtn.addEventListener("click", mobileMenuShowHandler);
+mobileMenuCloseBtn.addEventListener("click", overlayShowHandler);
+
 // sweetAlert in toast config
 export const toastTemplate = Swal.mixin({
   toast: true,
@@ -50,12 +59,3 @@ export const toastTemplate = Swal.mixin({
       toast.addEventListener("mouseleave", Swal.resumeTimer);
   },
 });
-
-if (cartProductsCounts) {
-  shoppingCartProductCountUpdate(cartProductsCounts);
-}
-
-// set events
-overlayContainer.addEventListener("click", overlayShowHandler);
-mobileMenuBtn.addEventListener("click", mobileMenuShowHandler);
-mobileMenuCloseBtn.addEventListener("click", overlayShowHandler);

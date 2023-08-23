@@ -32,6 +32,7 @@ const zoomImage = (event) => {
   productImage.style.transform = "scale(1.4)";
 };
 
+
 // zoomOut in image
 const zoomedOutImage = () => {
   productImage.style.transformOrigin = "center";

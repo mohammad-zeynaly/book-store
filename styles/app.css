@@ -195,6 +195,7 @@ body {
   background-color: var(--secondary-color);
   direction: rtl;
   line-height: 2;
+  -webkit-tap-highlight-color: transparent;
 }
 .container {
   width: 100%;

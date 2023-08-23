@@ -28,7 +28,7 @@
 * about-us page
 * contact-us page
 
---
+---
 ## features
 * feature add product to shopping-cart
 * feature remove product from shopping-cart

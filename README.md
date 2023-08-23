@@ -30,7 +30,6 @@
 
 --
 ## features
-
 * feature add product to shopping-cart
 * feature remove product from shopping-cart
 * feature save all products shopping-cart in localStorage

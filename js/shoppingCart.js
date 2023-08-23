@@ -1,9 +1,8 @@
 import {
   shoppingCartProductCountUpdate,
-  toastTemplate,
   saveInProductInLocalStorage,
 } from "./general.js";
-
+import { toastTemplate } from "./toastTemplate.js";
 let allShoppingCartProducts = JSON.parse(
   localStorage.getItem("products" || "[]")
 );

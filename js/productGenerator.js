@@ -1,10 +1,10 @@
 import { allProducts } from "../data/allData.js";
 import {
   shoppingCartProductCountUpdate,
-  toastTemplate,
   saveInProductInLocalStorage,
 } from "./general.js";
-
+import { toastTemplate } from "./toastTemplate.js";
+import { addProductToCart } from "./general.js";
 const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
 
 const productGenerator = (productArray, productsContainer, whatIsRender) => {
@@ -113,25 +113,25 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
   }
 };
 
-// add product to cart
-const addProductToCart = (productId) => {
-  const mainProduct = allProducts.find((product) => product.id === +productId);
+// // add product to cart
+// export const addProductToCart = (productId) => {
+//   const mainProduct = allProducts.find((product) => product.id === +productId);
 
-  const productIsInCart = shoppingCart?.some(
-    (product) => product.id === mainProduct.id
-  );
+//   const productIsInCart = shoppingCart?.some(
+//     (product) => product.id === mainProduct.id
+//   );
 
-  if (!productIsInCart) {
-    shoppingCart.push(mainProduct);
-    saveInProductInLocalStorage(shoppingCart);
-    shoppingCartProductCountUpdate(shoppingCart.length);
-    toastTemplate.fire({
-      icon: "success",
-      title: "محصول با موفقیت اضافه شد",
-    });
-  }
-  console.log(shoppingCart);
-};
+//   if (!productIsInCart) {
+//     shoppingCart.push(mainProduct);
+//     saveInProductInLocalStorage(shoppingCart);
+//     shoppingCartProductCountUpdate(shoppingCart.length);
+//     toastTemplate.fire({
+//       icon: "success",
+//       title: "محصول با موفقیت اضافه شد",
+//     });
+//   }
+//   console.log(shoppingCart);
+// };
 
 // add function to window browser
 window.addProductToCart = addProductToCart;

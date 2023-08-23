@@ -72,7 +72,7 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
                 >
                   <img
                     class="best-sellers-box__image"
-                    src="${img}"
+                    src=".${img}"
                     alt="عکس محصول "
                   />
                 </a>

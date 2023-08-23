@@ -16,8 +16,8 @@
 * java script 
 * swiper
 * sweetAlert2
----
 
+---
 ## pages
 * home page
 * allProducts page
@@ -29,7 +29,6 @@
 * contact-us page
 
 --
-
 ## features
 
 * feature add product to shopping-cart
@@ -40,7 +39,7 @@
 * feature pagination at page booksStore
 * feature add comment to weblog posts
 
---
+
 ## contact me
 * *[email](mailto:051.mhmdzynaly977@gmail.com)*
 * *[telegram](https://t.me/zeynali2003/)*

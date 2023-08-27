@@ -13,19 +13,21 @@ const productPriceDiscount = document.querySelector(
 );
 const urlParams = new URLSearchParams(location.search);
 const mainProductId = urlParams.get("id");
-const mainProduct = allProducts.find(
-  (product) => product.id === +mainProductId
-);
 const addToCartBtn = document.querySelector(".product-details-content__btn");
 
-const mainProductGenerator = () => {
-  productTitle.textContent = mainProduct.title;
-  productImage.setAttribute("src", `.${mainProduct.img}`);
-  productPriceReal.textContent = mainProduct.price + 15_000;
-  productPriceDiscount.textContent = mainProduct.price;
-};
-mainProductGenerator();
+fetch(`http://localhost:3000/allProducts/${mainProductId}`)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    mainProductGenerator(data);
+  });
 
+const mainProductGenerator = (mainProductDetail) => {
+  productTitle.textContent = mainProductDetail.title;
+  productImage.setAttribute("src", `.${mainProductDetail.img}`);
+  productPriceReal.textContent = mainProductDetail.price + 15_000;
+  productPriceDiscount.textContent = mainProductDetail.price;
+};
 // zoom in image
 const zoomImage = (event) => {
   let xPosition = event.clientX - event.target.offsetLeft;

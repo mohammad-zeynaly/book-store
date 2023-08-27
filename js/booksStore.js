@@ -1,5 +1,6 @@
 "use strict";
 import { allProducts } from "../data/allData.js";
+import { getProductDataToServer } from "./general.js";
 import productGenerator from "./productGenerator.js";
 const allProductsContainer = document.querySelector("#allProducts");
 const productSort = document.querySelector("#productSort");
@@ -10,7 +11,19 @@ let pageSize = 8;
 let currentPage = 1;
 
 // render all products
-productGenerator(products.slice(0, 8), allProductsContainer, "bookStore");
+
+if (products.length > 0) {
+  productGenerator(products.slice(0, 8), allProductsContainer, "bookStore");
+} else {
+  getProductDataToServer(
+    "http://localhost:3000/allProducts",
+    productGenerator,
+    allProductsContainer,
+    "bookStore"
+  );
+
+  window.location.pathname = "index.html";
+}
 
 // sort allProduct
 const allProductsSortHandler = (event) => {

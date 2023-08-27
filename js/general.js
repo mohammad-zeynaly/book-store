@@ -19,6 +19,22 @@ const overlayShowHandler = () => {
   overlayContainer.classList.remove("overlay");
   mobileMenuContainer.classList.remove("mobile-menu--open");
 };
+//get Product Data To Server
+export const getProductDataToServer = (
+  url,
+  productGenerator,
+  container,
+  page
+) => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      localStorage.setItem("allProducts", JSON.stringify(data));
+
+      productGenerator(data, container, page);
+    })
+    .catch((error) => console.error("Fail to Fetch :(( ", error));
+};
 
 // is show mobile menu
 const mobileMenuShowHandler = () => {

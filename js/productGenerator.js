@@ -1,4 +1,3 @@
-import { allProducts } from "../data/allData.js";
 import {
   shoppingCartProductCountUpdate,
   saveInProductInLocalStorage,

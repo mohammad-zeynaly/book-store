@@ -1,6 +1,8 @@
 "use strict";
 import { allProducts } from "../data/allData.js";
+
 import { toastTemplate } from "./toastTemplate.js";
+
 // select element in dom
 const overlayContainer = document.querySelector("#overlay");
 const mobileMenuContainer = document.querySelector(".mobile-menu");

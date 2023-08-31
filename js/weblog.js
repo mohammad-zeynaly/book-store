@@ -1,8 +1,17 @@
 "use strict";
-import { allWeblogs } from "../data/allData.js";
+// import { allWeblogs } from "../data/allData.js";
 const allWeblogsContainer = document.getElementById("allWeblogs");
 
-const allWeblogsGenerator = () => {
+const fetchGetAllWeblogs = () => {
+  fetch("http://localhost:3000/allWeblogs")
+    .then((response) => response.json())
+    .then((data) => {
+      localStorage.setItem("allWeblogs", JSON.stringify(data));
+      allWeblogsGenerator(data);
+    });
+};
+fetchGetAllWeblogs();
+const allWeblogsGenerator = (allWeblogs) => {
   allWeblogs.map((weblog) => {
     let { id, title, img, caption } = weblog;
     allWeblogsContainer.insertAdjacentHTML(
@@ -13,6 +22,8 @@ const allWeblogsGenerator = () => {
                   class="weblog-item__image"
                   src="${img}"
                   alt="عکس هر وبلاگ"
+                  loading="lazy"
+                  
                 />
               </a>
               <span class="weblog-item__description">
@@ -45,5 +56,3 @@ const allWeblogsGenerator = () => {
     );
   });
 };
-
-allWeblogsGenerator();

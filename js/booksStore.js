@@ -15,12 +15,7 @@ let currentPage = 1;
 if (products.length > 0) {
   productGenerator(products.slice(0, 8), allProductsContainer, "bookStore");
 } else {
-  getProductDataToServer(
-    "http://localhost:3000/allProducts",
-    productGenerator,
-    allProductsContainer,
-    "bookStore"
-  );
+  getProductDataToServer(productGenerator, allProductsContainer, "bookStore");
 
   window.location.pathname = "index.html";
 }

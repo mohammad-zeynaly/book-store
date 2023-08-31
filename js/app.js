@@ -5,10 +5,5 @@ import productGenerator from "./productGenerator.js";
 // select element in dom
 const bestSellersProducts = document.querySelector("#bestSellersProducts");
 
-getProductDataToServer(
-  "http://localhost:3000/allProducts",
-  productGenerator,
-  bestSellersProducts,
-  "index"
-);
+getProductDataToServer(productGenerator, bestSellersProducts, "index");
 // productGenerator(allProducts, bestSellersProducts, "index");

@@ -32,6 +32,7 @@ const renderCartProductsToDom = (shoppingCartProducts) => {
                         class="shopping-cart-table-body__img"
                         src=".${img}"
                         alt="عکس محصول"
+                        loading="lazy"
                       />
                     </a>
                   </td>

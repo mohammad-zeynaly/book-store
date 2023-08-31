@@ -20,13 +20,8 @@ const overlayShowHandler = () => {
   mobileMenuContainer.classList.remove("mobile-menu--open");
 };
 //get Product Data To Server
-export const getProductDataToServer = (
-  url,
-  productGenerator,
-  container,
-  page
-) => {
-  fetch(url)
+export const getProductDataToServer = (productGenerator, container, page) => {
+  fetch("http://localhost:3000/allProducts")
     .then((response) => response.json())
     .then((data) => {
       localStorage.setItem("allProducts", JSON.stringify(data));

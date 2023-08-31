@@ -22,6 +22,7 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
                     class="best-sellers-box__image"
                     src="${img}"
                     alt="عکس محصول "
+                    loading="lazy"
                   />
                 </a>
                 <span class="best-sellers-box-content">
@@ -73,6 +74,7 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
                     class="best-sellers-box__image"
                     src=".${img}"
                     alt="عکس محصول "
+                    loading="lazy"
                   />
                 </a>
                 <span class="best-sellers-box-content">

@@ -33,7 +33,7 @@ if (allWeblogs?.length > 0) {
   const mainBlog = allWeblogs.find((weblog) => weblog.id === +mainWeblogId);
   embedBlogInfo(mainBlog);
 } else {
-  fetch(`http://localhost:3000/allWeblogs/${mainWeblogId}`)
+  fetch(`https://xtra-book.iran.liara.run/allWeblogs/${mainWeblogId}`)
     .then((response) => response.json())
     .then((data) => embedBlogInfo(data));
 }

@@ -3,7 +3,7 @@
 const allWeblogsContainer = document.getElementById("allWeblogs");
 
 const fetchGetAllWeblogs = () => {
-  fetch("http://localhost:3000/allWeblogs")
+  fetch("https://xtra-book.iran.liara.run/allWeblogs")
     .then((response) => response.json())
     .then((data) => {
       localStorage.setItem("allWeblogs", JSON.stringify(data));

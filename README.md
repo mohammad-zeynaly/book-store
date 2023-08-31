@@ -16,6 +16,7 @@
 * java script 
 * swiper
 * sweetAlert2
+* json-server
 
 ---
 ## pages

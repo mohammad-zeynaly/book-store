@@ -29,7 +29,7 @@ if (allProducts?.length > 0) {
   console.log(mainProduct);
   mainProductGenerator(mainProduct);
 } else {
-  fetch(`http://localhost:3000/allProducts/${mainProductId}`)
+  fetch(`https://xtra-book.iran.liara.run/allProducts/${mainProductId}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

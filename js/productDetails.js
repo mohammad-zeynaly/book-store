@@ -14,12 +14,17 @@ const productPriceDiscount = document.querySelector(
 const urlParams = new URLSearchParams(location.search);
 const mainProductId = urlParams.get("id");
 const addToCartBtn = document.querySelector(".product-details-content__btn");
+const numberConvert = new Intl.NumberFormat("fa");
 
 const mainProductGenerator = (mainProductDetail) => {
   productTitle.textContent = mainProductDetail.title;
   productImage.setAttribute("src", `.${mainProductDetail.img}`);
-  productPriceReal.textContent = mainProductDetail.price + 15_000;
-  productPriceDiscount.textContent = mainProductDetail.price;
+  productPriceReal.textContent = numberConvert.format(
+    mainProductDetail.price + 15_000
+  );
+  productPriceDiscount.textContent = numberConvert.format(
+    mainProductDetail.price
+  );
 };
 
 if (allProducts?.length > 0) {

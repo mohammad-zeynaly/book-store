@@ -19,6 +19,17 @@ const overlayShowHandler = () => {
   overlayContainer.classList.remove("overlay");
   mobileMenuContainer.classList.remove("mobile-menu--open");
 };
+//get Product Data To Server
+export const getProductDataToServer = (productGenerator, container, page) => {
+  fetch("https://xtra-book.iran.liara.run/allProducts")
+    .then((response) => response.json())
+    .then((data) => {
+      localStorage.setItem("allProducts", JSON.stringify(data));
+
+      productGenerator(data, container, page);
+    })
+    .catch((error) => console.error("Fail to Fetch :(( ", error));
+};
 
 // is show mobile menu
 const mobileMenuShowHandler = () => {
@@ -70,3 +81,5 @@ overlayContainer.addEventListener("click", overlayShowHandler);
 mobileMenuBtn.addEventListener("click", mobileMenuShowHandler);
 mobileMenuCloseBtn.addEventListener("click", overlayShowHandler);
 window.addProductToCart = addProductToCart;
+
+// main api => https://xtra-book.iran.liara.run/

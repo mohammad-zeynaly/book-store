@@ -23,11 +23,22 @@ const blogImage = document.querySelector("#blogImage");
 //search url parameters
 const urlParams = new URLSearchParams(location.search);
 const mainWeblogId = urlParams.get("id");
-const mainBlog = allWeblogs.find((weblog) => weblog.id === +mainWeblogId);
-const allWeblogCommentsWrapper = document.querySelector("#allWeblogComments");
 
-blogTitle.textContent = mainBlog.title;
-blogImage.setAttribute("src", mainBlog.img);
+const embedBlogInfo = (mainBlog) => {
+  blogTitle.textContent = mainBlog.title;
+  blogImage.setAttribute("src", mainBlog.img);
+};
+
+if (allWeblogs?.length > 0) {
+  const mainBlog = allWeblogs.find((weblog) => weblog.id === +mainWeblogId);
+  embedBlogInfo(mainBlog);
+} else {
+  fetch(`https://xtra-book.iran.liara.run/allWeblogs/${mainWeblogId}`)
+    .then((response) => response.json())
+    .then((data) => embedBlogInfo(data));
+}
+
+const allWeblogCommentsWrapper = document.querySelector("#allWeblogComments");
 
 // select element to dom
 const commentsForm = document.querySelector("#commentsForm");
@@ -69,6 +80,7 @@ const weblogPostGenerator = () => {
                           class="weblog-details-comments-item-heading__img"
                           src="../assets/images/users/default-user.png"
                           alt="عکس کاربر"
+                          loading="lazy"
                         />
                         <span
                           class="weblog-details-comments-item-heading__title"
@@ -115,6 +127,7 @@ const newCommentRenderToDom = (comment) => {
                           class="weblog-details-comments-item-heading__img"
                           src="../assets/images/users/default-user.png"
                           alt="عکس کاربر"
+                          loading="lazy"
                         />
                         <span
                           class="weblog-details-comments-item-heading__title"

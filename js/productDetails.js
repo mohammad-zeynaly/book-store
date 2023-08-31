@@ -13,19 +13,29 @@ const productPriceDiscount = document.querySelector(
 );
 const urlParams = new URLSearchParams(location.search);
 const mainProductId = urlParams.get("id");
-const mainProduct = allProducts.find(
-  (product) => product.id === +mainProductId
-);
 const addToCartBtn = document.querySelector(".product-details-content__btn");
 
-const mainProductGenerator = () => {
-  productTitle.textContent = mainProduct.title;
-  productImage.setAttribute("src", `.${mainProduct.img}`);
-  productPriceReal.textContent = mainProduct.price + 15_000;
-  productPriceDiscount.textContent = mainProduct.price;
+const mainProductGenerator = (mainProductDetail) => {
+  productTitle.textContent = mainProductDetail.title;
+  productImage.setAttribute("src", `.${mainProductDetail.img}`);
+  productPriceReal.textContent = mainProductDetail.price + 15_000;
+  productPriceDiscount.textContent = mainProductDetail.price;
 };
-mainProductGenerator();
 
+if (allProducts?.length > 0) {
+  const mainProduct = allProducts.find(
+    (product) => product.id === +mainProductId
+  );
+  console.log(mainProduct);
+  mainProductGenerator(mainProduct);
+} else {
+  fetch(`https://xtra-book.iran.liara.run/allProducts/${mainProductId}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      mainProductGenerator(data);
+    });
+}
 // zoom in image
 const zoomImage = (event) => {
   let xPosition = event.clientX - event.target.offsetLeft;

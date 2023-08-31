@@ -1,10 +1,6 @@
-import {
-  shoppingCartProductCountUpdate,
-  saveInProductInLocalStorage,
-} from "./general.js";
-import { toastTemplate } from "./toastTemplate.js";
 import { addProductToCart } from "./general.js";
 const shoppingCart = JSON.parse(localStorage.getItem("products") || "[]");
+const numberConvert = new Intl.NumberFormat("fa");
 
 const productGenerator = (productArray, productsContainer, whatIsRender) => {
   if (whatIsRender === "index") {
@@ -34,7 +30,7 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
                       ${title} 
                     </a>
                     <strong class="best-sellers-box__price">
-                      ${price} هزار تومان
+                      ${numberConvert.format(price)} هزار تومان
                     </strong>
                   </span>
                   <button class="best-sellers-box__btn" onclick="addProductToCart('${id}')">
@@ -86,7 +82,7 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
                       ${title} 
                     </a>
                     <strong class="best-sellers-box__price">
-                      ${price} هزار تومان
+                      ${numberConvert.format(price)} هزار تومان
                     </strong>
 
                   </span>
@@ -113,26 +109,6 @@ const productGenerator = (productArray, productsContainer, whatIsRender) => {
     });
   }
 };
-
-// // add product to cart
-// export const addProductToCart = (productId) => {
-//   const mainProduct = allProducts.find((product) => product.id === +productId);
-
-//   const productIsInCart = shoppingCart?.some(
-//     (product) => product.id === mainProduct.id
-//   );
-
-//   if (!productIsInCart) {
-//     shoppingCart.push(mainProduct);
-//     saveInProductInLocalStorage(shoppingCart);
-//     shoppingCartProductCountUpdate(shoppingCart.length);
-//     toastTemplate.fire({
-//       icon: "success",
-//       title: "محصول با موفقیت اضافه شد",
-//     });
-//   }
-//   console.log(shoppingCart);
-// };
 
 // add function to window browser
 window.addProductToCart = addProductToCart;

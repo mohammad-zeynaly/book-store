@@ -68,6 +68,11 @@ export const addProductToCart = (productId) => {
       icon: "success",
       title: "محصول با موفقیت اضافه شد",
     });
+  } else {
+    toastTemplate.fire({
+      icon: "warning",
+      title: "محصول از قبل در سبد خرید موجود می باشد ",
+    });
   }
   console.log(shoppingCart);
 };

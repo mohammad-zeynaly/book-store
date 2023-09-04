@@ -3,7 +3,9 @@
 const allWeblogsContainer = document.getElementById("allWeblogs");
 
 const fetchGetAllWeblogs = () => {
-  fetch("https://handy-deluxe-hovercraft.glitch.me/allWeblogs")
+  fetch(
+    "https://my-json-server.typicode.com/mohammad-zeynali/extra-book-api/allWeblogs"
+  )
     .then((response) => response.json())
     .then((data) => {
       localStorage.setItem("allWeblogs", JSON.stringify(data));

@@ -23,7 +23,7 @@ const overlayShowHandler = () => {
 };
 //get Product Data To Server
 export const getProductDataToServer = (productGenerator, container, page) => {
-  fetch("https://xtra-book.iran.liara.run/allProducts")
+  fetch("https://handy-deluxe-hovercraft.glitch.me/allProducts")
     .then((response) => response.json())
     .then((data) => {
       localStorage.setItem("allProducts", JSON.stringify(data));

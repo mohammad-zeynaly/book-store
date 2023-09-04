@@ -34,7 +34,9 @@ if (allProducts?.length > 0) {
   console.log(mainProduct);
   mainProductGenerator(mainProduct);
 } else {
-  fetch(`https://xtra-book.iran.liara.run/allProducts/${mainProductId}`)
+  fetch(
+    `https://handy-deluxe-hovercraft.glitch.me/allProducts/${mainProductId}`
+  )
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

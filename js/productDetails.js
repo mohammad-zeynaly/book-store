@@ -35,7 +35,7 @@ if (allProducts?.length > 0) {
   mainProductGenerator(mainProduct);
 } else {
   fetch(
-    `https://handy-deluxe-hovercraft.glitch.me/allProducts/${mainProductId}`
+    `https://my-json-server.typicode.com/mohammad-zeynali/extra-book-api/allProducts/${mainProductId}`
   )
     .then((response) => response.json())
     .then((data) => {

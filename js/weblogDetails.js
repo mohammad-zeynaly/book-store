@@ -33,7 +33,9 @@ if (allWeblogs?.length > 0) {
   const mainBlog = allWeblogs.find((weblog) => weblog.id === +mainWeblogId);
   embedBlogInfo(mainBlog);
 } else {
-  fetch(`https://handy-deluxe-hovercraft.glitch.me/allWeblogs/${mainWeblogId}`)
+  fetch(
+    `https://my-json-server.typicode.com/mohammad-zeynali/extra-book-api/allWeblogs/${mainWeblogId}`
+  )
     .then((response) => response.json())
     .then((data) => embedBlogInfo(data));
 }

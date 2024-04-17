@@ -2,7 +2,7 @@
 ---
 
 # floda.com/fa page front-end
-## [review online](https://mohammad-zeynali.github.io/book-store/)
+## [review online](https://mohammad-zeynaly.github.io/book-store/)
 
 ---
 ## tips
